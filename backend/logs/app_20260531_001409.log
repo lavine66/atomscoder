@@ -19,3 +19,33 @@
 2026-05-31 00:14:10,798 - services.mock_data - INFO - Ignore initialize data
 2026-05-31 00:14:10,798 - services.auth - INFO - Ignore initialize admin
 2026-05-31 00:14:10,798 - main - INFO - === Application startup completed successfully ===
+2026-05-31 00:15:56,477 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-31 00:16:45,051 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-31 00:16:45,051 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-31 00:16:45,078 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-31 00:16:45,398 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-31 00:16:45,399 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-31 00:16:45,399 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-31 00:16:45,399 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-31 00:16:45,400 - core.database - INFO - Starting database initialization...
+2026-05-31 00:16:45,400 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-31 00:16:45,400 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-31 00:16:45,401 - core.database - INFO - Creating async database engine...
+2026-05-31 00:16:45,402 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-31 00:16:45,478 - core.database - INFO - Database engine created successfully
+2026-05-31 00:16:45,478 - core.database - INFO - Creating async session maker...
+2026-05-31 00:16:45,478 - core.database - INFO - Async session maker created successfully
+2026-05-31 00:16:45,479 - core.database - INFO - Database connection initialized successfully
+2026-05-31 00:16:45,479 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-31 00:16:45,479 - core.database - INFO - 🔧 Starting table creation...
+2026-05-31 00:16:47,069 - core.database - INFO - Tables initialized successfully
+2026-05-31 00:16:47,069 - core.database - DEBUG - [DB_OP] Create tables completed in 1.5901s
+2026-05-31 00:16:47,133 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-31 00:16:47,133 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.7346s
+2026-05-31 00:16:47,134 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-31 00:16:47,809 - routers.projects - DEBUG - Found 11 projectss
+2026-05-31 00:16:47,810 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.4112s
+2026-05-31 00:17:34,436 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-31 00:17:34,503 - core.database - INFO - Database connection closed and engine disposed
+2026-05-31 00:17:34,504 - services.database - INFO - Database connections closed
+2026-05-31 00:17:34,504 - services.database - DEBUG - [DB_OP] Database close completed in 0.0680s

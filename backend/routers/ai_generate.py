@@ -9,6 +9,12 @@ from dependencies.auth import get_current_user
 from schemas.auth import UserResponse
 from services.aihub import AIHubService
 from schemas.aihub import GenTxtRequest, ChatMessage
+from utils.ai_context import (
+    build_file_context,
+    build_conversation_window,
+    estimate_tokens,
+    allocate_token_budget,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -272,20 +278,42 @@ async def generate_code(
     """Generate code using AI - returns complete JSON response"""
     service = AIHubService()
 
+    # Calculate token budget allocation
+    system_tokens = estimate_tokens(SYSTEM_PROMPT)
+    budget = allocate_token_budget(system_tokens)
+
     messages = [ChatMessage(role="system", content=SYSTEM_PROMPT)]
 
+    # Smart file context: backend re-validates the context sent by frontend
     if data.project_context:
+        context_tokens = estimate_tokens(data.project_context)
+        # If frontend already optimized context, use as-is; otherwise truncate
+        if context_tokens <= budget["file_context"]:
+            file_context = data.project_context
+        else:
+            # Truncate to budget (keep beginning which has most important files)
+            max_chars = budget["file_context"] * 4
+            file_context = data.project_context[:max_chars] + "\n[... truncated for token budget]"
+        
         messages.append(ChatMessage(
             role="user",
-            content=f"Current project files context:\n{data.project_context}"
+            content=f"Current project files context:\n{file_context}"
         ))
         messages.append(ChatMessage(
             role="assistant",
             content="I understand the current project state. I'll modify or build upon these files based on your next instruction."
         ))
 
-    for msg in data.messages:
-        messages.append(ChatMessage(role=msg.role, content=msg.content))
+    # Smart conversation windowing on backend side
+    conversation_msgs = [{"role": m.role, "content": m.content} for m in data.messages]
+    windowed_msgs = build_conversation_window(
+        conversation_msgs,
+        token_budget=budget["conversation"],
+        max_messages=20,
+    )
+    
+    for msg in windowed_msgs:
+        messages.append(ChatMessage(role=msg["role"], content=msg["content"]))
 
     # Model fallback chain: try each model in order until one succeeds
     fallback_models = ["claude-opus-4.6", "deepseek-v4-pro", "gpt-5.4"]

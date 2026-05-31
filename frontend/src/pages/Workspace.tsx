@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { client } from "@/lib/client";
 import { useToast } from "@/hooks/use-toast";
+import { buildConversationWindow, buildFileContext, buildCodeSummary } from "@/lib/aiContext";
 import ChatPanel from "@/components/workspace/ChatPanel";
 import FileTree from "@/components/workspace/FileTree";
 import CodeEditor from "@/components/workspace/CodeEditor";
@@ -198,16 +199,23 @@ const Workspace = () => {
     setIsGenerating(true);
     setStreamContent("");
 
-    // Build context from existing files
-    const projectContext = files.length > 0
-      ? files.map(f => `--- ${f.filename} ---\n${f.content}`).join("\n\n")
-      : "";
-
-    // Build message history for AI
-    const aiMessages = [...messages, newUserMsg].slice(-10).map(m => ({
+    // Build smart context from existing files (respects token budget)
+    const allMessages = [...messages, newUserMsg];
+    const recentForContext = allMessages.slice(-5).map(m => ({
       role: m.role,
       content: m.content,
     }));
+    const projectContext = buildFileContext(
+      files.map(f => ({ filename: f.filename, content: f.content, type: f.type })),
+      recentForContext
+    );
+
+    // Build optimized conversation window (keeps first msg + recent + summary)
+    const aiMessages = buildConversationWindow(
+      allMessages.map(m => ({ role: m.role, content: m.content })),
+      14000, // token budget for conversation
+      20     // max messages
+    );
 
     try {
       const response = await client.apiCall.invoke({
@@ -463,15 +471,20 @@ const Workspace = () => {
         await saveFiles(newFiles);
         await saveVersion(newFiles, parsed.description || "Code updated");
 
-        // Show friendly conversational message in chat (never raw code/JSON)
-        const assistantMsg = parsed.description || "I've generated the code for you! You can see the result in the Preview panel on the right. Would you like me to make any changes?";
-        setMessages((prev) => [...prev, { role: "assistant", content: assistantMsg }]);
+        // Build a richer assistant message with code summary for context
+        const description = parsed.description || "I've generated the code for you! You can see the result in the Preview panel on the right. Would you like me to make any changes?";
+        const codeSummary = buildCodeSummary(newFiles, description);
+        
+        // Show friendly message in chat UI
+        setMessages((prev) => [...prev, { role: "assistant", content: description }]);
+        
+        // Save with code summary so AI has richer context in future turns
         try {
           await client.entities.conversations.create({
             data: {
               project_id: Number(projectId),
               role: "assistant",
-              content: assistantMsg,
+              content: codeSummary,
             },
           });
         } catch (err) {
