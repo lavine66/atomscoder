@@ -1,0 +1,149 @@
+2026-05-29 20:32:26,177 - main - INFO - === Logging system initialized ===
+2026-05-29 20:32:26,178 - main - INFO - Log file: logs/app_20260529_203226.log
+2026-05-29 20:32:26,178 - main - INFO - Log level: INFO
+2026-05-29 20:32:26,178 - main - INFO - Timestamp: 20260529_203226
+2026-05-29 20:32:26,934 - main - INFO - Included router: routers.ai_generate.router
+2026-05-29 20:32:26,953 - main - INFO - Included router: routers.aihub.router
+2026-05-29 20:32:26,965 - main - INFO - Included router: routers.auth.router
+2026-05-29 20:32:27,010 - main - INFO - Included router: routers.conversations.router
+2026-05-29 20:32:27,054 - main - INFO - Included router: routers.health.router
+2026-05-29 20:32:27,099 - main - INFO - Included router: routers.project_files.router
+2026-05-29 20:32:27,156 - main - INFO - Included router: routers.projects.router
+2026-05-29 20:32:27,164 - main - INFO - Included router: routers.publish.router
+2026-05-29 20:32:27,186 - main - INFO - Included router: routers.settings.router
+2026-05-29 20:32:27,224 - main - INFO - Included router: routers.storage.router
+2026-05-29 20:32:27,231 - main - INFO - Included router: routers.user.router
+2026-05-29 20:32:27,273 - main - INFO - Included router: routers.versions.router
+2026-05-29 20:32:27,274 - main - INFO - === Application startup initiated ===
+2026-05-29 20:32:27,274 - services.database - INFO - Ignore creating tables
+2026-05-29 20:32:27,275 - services.mock_data - INFO - Ignore initialize data
+2026-05-29 20:32:27,275 - services.auth - INFO - Ignore initialize admin
+2026-05-29 20:32:27,275 - main - INFO - === Application startup completed successfully ===
+2026-05-29 20:33:28,867 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-29 20:33:30,701 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-29 20:33:30,701 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-29 20:33:30,720 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:31,060 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:31,060 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:31,060 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-29 20:33:31,060 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-29 20:33:31,061 - core.database - INFO - Starting database initialization...
+2026-05-29 20:33:31,061 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-29 20:33:31,061 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-29 20:33:31,062 - core.database - INFO - Creating async database engine...
+2026-05-29 20:33:31,062 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-29 20:33:31,114 - core.database - INFO - Database engine created successfully
+2026-05-29 20:33:31,114 - core.database - INFO - Creating async session maker...
+2026-05-29 20:33:31,114 - core.database - INFO - Async session maker created successfully
+2026-05-29 20:33:31,114 - core.database - INFO - Database connection initialized successfully
+2026-05-29 20:33:31,114 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-29 20:33:31,114 - core.database - INFO - 🔧 Starting table creation...
+2026-05-29 20:33:32,746 - core.database - INFO - Tables initialized successfully
+2026-05-29 20:33:32,747 - core.database - DEBUG - [DB_OP] Create tables completed in 1.6327s
+2026-05-29 20:33:32,812 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-29 20:33:32,813 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.7524s
+2026-05-29 20:33:32,813 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-29 20:33:33,393 - routers.projects - DEBUG - Found 6 projectss
+2026-05-29 20:33:33,471 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.4111s
+2026-05-29 20:33:35,337 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:35,822 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:35,822 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:35,822 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:35,822 - routers.projects - DEBUG - Fetching projects with id: 6, fields=None
+2026-05-29 20:33:36,204 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3824s
+2026-05-29 20:33:36,797 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:36,927 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:36,927 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:36,928 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:36,928 - routers.project_files - DEBUG - Querying project_filess: query={"project_id":6}, sort=None, skip=0, limit=100, fields=None
+2026-05-29 20:33:37,109 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:37,109 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:37,110 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:37,110 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-29 20:33:37,456 - routers.project_files - DEBUG - Found 3 project_filess
+2026-05-29 20:33:37,458 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5301s
+2026-05-29 20:33:37,789 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:37,790 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:37,790 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:37,790 - routers.conversations - DEBUG - Querying conversationss: query={"project_id":6}, sort=created_at, skip=0, limit=200, fields=None
+2026-05-29 20:33:37,855 - routers.projects - DEBUG - Found 6 projectss
+2026-05-29 20:33:37,856 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7470s
+2026-05-29 20:33:38,301 - routers.conversations - DEBUG - Found 5 conversationss
+2026-05-29 20:33:38,301 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5115s
+2026-05-29 20:33:38,622 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:38,622 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:38,622 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:38,623 - routers.versions - DEBUG - Querying versionss: query={"project_id":6}, sort=-version_number, skip=0, limit=50, fields=None
+2026-05-29 20:33:39,197 - routers.versions - DEBUG - Found 1 versionss
+2026-05-29 20:33:39,197 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5753s
+2026-05-29 20:33:43,208 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:43,208 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:43,208 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:43,209 - routers.projects - DEBUG - Creating new projects with data: name='test4' description='' status='active' published_url=''
+2026-05-29 20:33:44,045 - services.projects - INFO - Created projects with id: 7
+2026-05-29 20:33:44,046 - routers.projects - INFO - Projects created successfully with id: 7
+2026-05-29 20:33:44,046 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8377s
+2026-05-29 20:33:44,354 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:44,651 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:44,651 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:44,651 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-29 20:33:44,651 - routers.projects - DEBUG - Fetching projects with id: 7, fields=None
+2026-05-29 20:33:44,970 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3191s
+2026-05-29 20:33:45,365 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:45,366 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:45,366 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:45,368 - routers.project_files - DEBUG - Querying project_filess: query={"project_id":7}, sort=None, skip=0, limit=100, fields=None
+2026-05-29 20:33:45,878 - routers.project_files - DEBUG - Found 0 project_filess
+2026-05-29 20:33:45,879 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5133s
+2026-05-29 20:33:46,185 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:46,186 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:46,186 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:46,186 - routers.conversations - DEBUG - Querying conversationss: query={"project_id":7}, sort=created_at, skip=0, limit=200, fields=None
+2026-05-29 20:33:46,568 - routers.conversations - DEBUG - Found 0 conversationss
+2026-05-29 20:33:46,569 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3835s
+2026-05-29 20:33:47,042 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:47,042 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:47,042 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-29 20:33:47,043 - routers.conversations - DEBUG - Creating new conversations with data: project_id=7 role='user' content='Build a todo app with dark theme'
+2026-05-29 20:33:47,055 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:47,055 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:33:47,055 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:33:47,056 - routers.versions - DEBUG - Querying versionss: query={"project_id":7}, sort=-version_number, skip=0, limit=50, fields=None
+2026-05-29 20:33:47,563 - routers.versions - DEBUG - Found 0 versionss
+2026-05-29 20:33:47,564 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5088s
+2026-05-29 20:33:47,877 - services.conversations - INFO - Created conversations with id: 12
+2026-05-29 20:33:47,878 - routers.conversations - INFO - Conversations created successfully with id: 12
+2026-05-29 20:33:47,878 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8361s
+2026-05-29 20:33:48,188 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:33:48,189 - core.config - DEBUG - Read dynamic attribute app_ai_base_url from environment variable APP_AI_BASE_URL
+2026-05-29 20:33:48,189 - core.config - DEBUG - Read dynamic attribute app_ai_key from environment variable APP_AI_KEY
+2026-05-29 20:33:48,766 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-2c95358e-40b0-45fe-8e1c-a6bd7c55367b', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are an expert full-stack web developer AI assistant and a friendly pair programmer. Your job is to generate complete, working web applications based on user requirements, while maintaining a helpful conversational tone.\n\nWhen the user describes what they want, you MUST respond with a valid JSON object containing the files to create/update. The JSON format is:\n\n{\n  "files": [\n    {\n      "filename": "index.html",\n      "content": "<!DOCTYPE html>...",\n      "type": "html"\n    },\n    {\n      "filename": "styles.css", \n      "content": "body { ... }",\n      "type": "css"\n    },\n    {\n      "filename": "script.js",\n      "content": "// JavaScript code...",\n      "type": "js"\n    }\n  ],\n  "description": "A friendly, conversational message (1-3 sentences) describing what you built or changed, followed by a follow-up question to guide the user. For example: \'I\'ve created a modern todo app with a clean dark theme and smooth animations. You can see it in the preview panel on the right! Would you like me to add a feature to filter tasks by status, or change the color scheme?\'"\n}\n\nRules:\n1. Always generate complete, working code - never use placeholders or TODOs\n2. Use modern HTML5, CSS3, and vanilla JavaScript (ES6+)\n3. Make the UI visually appealing with good styling\n4. Ensure the code works standalone in a browser without any build tools\n5. If modifying existing code, include ALL files (even unchanged ones) in your response\n6. For multi-file projects, always include an index.html as the entry point\n7. Use responsive design principles\n8. Add appropriate comments in the code\n9. If the user asks to modify existing code, incorporate their changes while keeping the rest intact\n10. ONLY output the JSON object, no markdown code blocks, no extra text before or after the JSON\n11. The "description" field is CRITICAL - it must be conversational, friendly, and always end with a follow-up question or suggestion to help the user iterate. Think of yourself as a helpful AI pair programmer guiding the user through building their app step by step.\n12. Never put code or technical JSON in the description field - keep it human-readable and encouraging'}, {'role': 'user', 'content': 'Build a todo app with dark theme'}], 'model': 'claude-opus-4.6', 'max_tokens': 4096, 'stream': True, 'temperature': 0.7}}
+2026-05-29 20:33:48,767 - openai._base_client - DEBUG - Sending HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions
+2026-05-29 20:33:48,777 - httpcore.connection - DEBUG - connect_tcp.started host='llmapi-api.deepwisdom.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2026-05-29 20:33:48,795 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fc164c3ed10>
+2026-05-29 20:33:48,796 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7fc1653374c0> server_hostname='llmapi-api.deepwisdom.ai' timeout=5.0
+2026-05-29 20:33:48,806 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fc164c3d780>
+2026-05-29 20:33:48,807 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-29 20:33:48,808 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-29 20:33:48,808 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-29 20:33:48,809 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-29 20:33:48,809 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-29 20:33:50,103 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 30 May 2026 03:33:50 GMT'), (b'Content-Type', b'text/event-stream'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'X-Oneapi-Request-Id', b'2026052920334883908055642244228'), (b'X-Oneapi-Trans-Id', b'34955713465811396'), (b'X-Request-Id', b'2026052920334883908055642244228'), (b'cf-cache-status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a03aadf40ea52f77-LAX')])
+2026-05-29 20:33:50,104 - httpx - INFO - HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 20:33:50,105 - openai._base_client - DEBUG - HTTP Response: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "200 OK" Headers({'date': 'Sat, 30 May 2026 03:33:50 GMT', 'content-type': 'text/event-stream', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'x-oneapi-request-id': '2026052920334883908055642244228', 'x-oneapi-trans-id': '34955713465811396', 'x-request-id': '2026052920334883908055642244228', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'cf-ray': 'a03aadf40ea52f77-LAX'})
+2026-05-29 20:33:50,105 - openai._base_client - DEBUG - request_id: 2026052920334883908055642244228
+2026-05-29 20:33:50,105 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-29 20:34:26,651 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-29 20:34:26,651 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-29 20:34:26,653 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2026-05-29 20:34:27,005 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:34:27,006 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:34:27,006 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-29 20:34:27,007 - routers.conversations - DEBUG - Creating new conversations with data: project_id=7 role='assistant' content="I had trouble processing the response. Let me try again — could you describe what you'd like to build in a bit more detail?"
+2026-05-29 20:34:27,770 - services.conversations - INFO - Created conversations with id: 13
+2026-05-29 20:34:27,771 - routers.conversations - INFO - Conversations created successfully with id: 13
+2026-05-29 20:34:27,771 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7651s
+2026-05-29 20:34:33,256 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-29 20:34:33,388 - core.database - INFO - Database connection closed and engine disposed
+2026-05-29 20:34:33,389 - services.database - INFO - Database connections closed
+2026-05-29 20:34:33,389 - services.database - DEBUG - [DB_OP] Database close completed in 0.1328s

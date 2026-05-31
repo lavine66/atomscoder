@@ -1,0 +1,170 @@
+2026-05-29 21:15:45,137 - main - INFO - === Logging system initialized ===
+2026-05-29 21:15:45,137 - main - INFO - Log file: logs/app_20260529_211545.log
+2026-05-29 21:15:45,137 - main - INFO - Log level: INFO
+2026-05-29 21:15:45,138 - main - INFO - Timestamp: 20260529_211545
+2026-05-29 21:15:46,128 - main - INFO - Included router: routers.ai_generate.router
+2026-05-29 21:15:46,146 - main - INFO - Included router: routers.aihub.router
+2026-05-29 21:15:46,157 - main - INFO - Included router: routers.auth.router
+2026-05-29 21:15:46,201 - main - INFO - Included router: routers.conversations.router
+2026-05-29 21:15:46,202 - main - INFO - Included router: routers.health.router
+2026-05-29 21:15:46,248 - main - INFO - Included router: routers.project_files.router
+2026-05-29 21:15:46,292 - main - INFO - Included router: routers.projects.router
+2026-05-29 21:15:46,298 - main - INFO - Included router: routers.publish.router
+2026-05-29 21:15:46,664 - main - INFO - Included router: routers.settings.router
+2026-05-29 21:15:46,708 - main - INFO - Included router: routers.storage.router
+2026-05-29 21:15:46,717 - main - INFO - Included router: routers.user.router
+2026-05-29 21:15:46,761 - main - INFO - Included router: routers.versions.router
+2026-05-29 21:15:46,762 - main - INFO - === Application startup initiated ===
+2026-05-29 21:15:46,763 - services.database - INFO - Ignore creating tables
+2026-05-29 21:15:46,763 - services.mock_data - INFO - Ignore initialize data
+2026-05-29 21:15:46,763 - services.auth - INFO - Ignore initialize admin
+2026-05-29 21:15:46,763 - main - INFO - === Application startup completed successfully ===
+2026-05-29 21:15:53,869 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-29 21:15:53,869 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-29 21:15:53,881 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:15:55,643 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:15:55,644 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 21:15:55,644 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-29 21:15:55,644 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-29 21:15:55,644 - core.database - INFO - Starting database initialization...
+2026-05-29 21:15:55,644 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-29 21:15:55,644 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-29 21:15:55,645 - core.database - INFO - Creating async database engine...
+2026-05-29 21:15:55,645 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-29 21:15:55,687 - core.database - INFO - Database engine created successfully
+2026-05-29 21:15:55,687 - core.database - INFO - Creating async session maker...
+2026-05-29 21:15:55,688 - core.database - INFO - Async session maker created successfully
+2026-05-29 21:15:55,688 - core.database - INFO - Database connection initialized successfully
+2026-05-29 21:15:55,688 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-29 21:15:55,688 - core.database - INFO - 🔧 Starting table creation...
+2026-05-29 21:15:57,582 - core.database - INFO - Tables initialized successfully
+2026-05-29 21:15:57,583 - core.database - DEBUG - [DB_OP] Create tables completed in 1.8949s
+2026-05-29 21:15:57,647 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-29 21:15:57,647 - core.database - DEBUG - [DB_OP] Database session created successfully in 2.0036s
+2026-05-29 21:15:57,648 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-29 21:15:58,304 - routers.projects - DEBUG - Found 9 projectss
+2026-05-29 21:15:58,305 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.6618s
+2026-05-29 21:25:10,174 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:25:10,670 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:25:10,670 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 21:25:10,670 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 21:25:10,671 - routers.projects - DEBUG - Fetching projects with id: 9, fields=None
+2026-05-29 21:25:11,406 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:25:11,406 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 21:25:11,406 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-29 21:25:11,407 - routers.conversations - DEBUG - Creating new conversations with data: project_id=9 role='user' content='Build a todo app with dark theme'
+2026-05-29 21:25:12,031 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.3608s
+2026-05-29 21:25:12,358 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:25:12,358 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 21:25:12,358 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-29 21:25:12,359 - routers.project_files - DEBUG - Querying project_filess: query={"project_id":9}, sort=None, skip=0, limit=100, fields=None
+2026-05-29 21:25:12,564 - services.conversations - INFO - Created conversations with id: 21
+2026-05-29 21:25:12,564 - routers.conversations - INFO - Conversations created successfully with id: 21
+2026-05-29 21:25:12,565 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.1591s
+2026-05-29 21:25:12,897 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:25:12,897 - core.config - DEBUG - Read dynamic attribute app_ai_base_url from environment variable APP_AI_BASE_URL
+2026-05-29 21:25:12,898 - core.config - DEBUG - Read dynamic attribute app_ai_key from environment variable APP_AI_KEY
+2026-05-29 21:25:13,567 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-558e3ea2-3640-437b-8b3e-0b177e58087f', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are an expert full-stack web developer AI assistant and a friendly pair programmer. Your job is to generate complete, working web applications based on user requirements, while maintaining a helpful conversational tone.\n\nWhen the user describes what they want, you MUST respond with a valid JSON object containing the files to create/update. The JSON format is:\n\n{\n  "files": [\n    {\n      "filename": "index.html",\n      "content": "<!DOCTYPE html>...",\n      "type": "html"\n    },\n    {\n      "filename": "styles.css", \n      "content": "body { ... }",\n      "type": "css"\n    },\n    {\n      "filename": "script.js",\n      "content": "// JavaScript code...",\n      "type": "js"\n    }\n  ],\n  "description": "A friendly, conversational message (1-3 sentences) describing what you built or changed, followed by a follow-up question to guide the user. For example: \'I\'ve created a modern todo app with a clean dark theme and smooth animations. You can see it in the preview panel on the right! Would you like me to add a feature to filter tasks by status, or change the color scheme?\'"\n}\n\nRules:\n1. Always generate complete, working code - never use placeholders or TODOs\n2. Use modern HTML5, CSS3, and vanilla JavaScript (ES6+)\n3. Make the UI visually appealing with good styling\n4. Ensure the code works standalone in a browser without any build tools\n5. If modifying existing code, include ALL files (even unchanged ones) in your response\n6. For multi-file projects, always include an index.html as the entry point\n7. Use responsive design principles\n8. Add appropriate comments in the code\n9. If the user asks to modify existing code, incorporate their changes while keeping the rest intact\n10. ONLY output the JSON object, no markdown code blocks, no extra text before or after the JSON\n11. The "description" field is CRITICAL - it must be conversational, friendly, and always end with a follow-up question or suggestion to help the user iterate. Think of yourself as a helpful AI pair programmer guiding the user through building their app step by step.\n12. Never put code or technical JSON in the description field - keep it human-readable and encouraging'}, {'role': 'user', 'content': 'Build a todo app with dark theme'}], 'model': 'claude-opus-4.6', 'max_tokens': 16384, 'stream': True, 'temperature': 0.7}}
+2026-05-29 21:25:13,568 - openai._base_client - DEBUG - Sending HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions
+2026-05-29 21:25:13,569 - httpcore.connection - DEBUG - connect_tcp.started host='llmapi-api.deepwisdom.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2026-05-29 21:25:13,587 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f4ecbf06ef0>
+2026-05-29 21:25:13,588 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f4ed872b940> server_hostname='llmapi-api.deepwisdom.ai' timeout=5.0
+2026-05-29 21:25:13,596 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f4ecbf065f0>
+2026-05-29 21:25:13,597 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-29 21:25:13,598 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-29 21:25:13,598 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-29 21:25:13,598 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-29 21:25:13,598 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-29 21:25:13,630 - routers.project_files - DEBUG - Found 0 project_filess
+2026-05-29 21:25:13,631 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.2729s
+2026-05-29 21:25:13,712 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Date', b'Sat, 30 May 2026 04:25:13 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'X-Oneapi-Request-Id', b'2026052921251362250020224299741'), (b'X-Oneapi-Trans-Id', b'34960888985289155'), (b'X-Request-Id', b'2026052921251362250020224299741'), (b'cf-cache-status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a03af943fc8e3760-LAX')])
+2026-05-29 21:25:13,713 - httpx - INFO - HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2026-05-29 21:25:13,713 - openai._base_client - DEBUG - HTTP Response: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "403 Forbidden" Headers({'date': 'Sat, 30 May 2026 04:25:13 GMT', 'content-type': 'application/json; charset=utf-8', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'x-oneapi-request-id': '2026052921251362250020224299741', 'x-oneapi-trans-id': '34960888985289155', 'x-request-id': '2026052921251362250020224299741', 'cf-cache-status': 'DYNAMIC', 'content-encoding': 'gzip', 'server': 'cloudflare', 'cf-ray': 'a03af943fc8e3760-LAX'})
+2026-05-29 21:25:13,713 - openai._base_client - DEBUG - request_id: 2026052921251362250020224299741
+2026-05-29 21:25:13,714 - openai._base_client - DEBUG - Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/openai/_base_client.py", line 1646, in request
+    response.raise_for_status()
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://llmapi-api.deepwisdom.ai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-05-29 21:25:13,717 - openai._base_client - DEBUG - Not retrying
+2026-05-29 21:25:13,717 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-29 21:25:13,718 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-29 21:25:13,718 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-29 21:25:13,718 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-29 21:25:13,719 - openai._base_client - DEBUG - Re-raising status error
+2026-05-29 21:25:13,723 - services.aihub - ERROR - gentxt_stream error: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052921251362250020224299741)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}
+2026-05-29 21:25:13,723 - routers.ai_generate - WARNING - Model claude-opus-4.6 failed: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052921251362250020224299741)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}, trying next model
+2026-05-29 21:25:13,724 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-4f61e483-b7c0-4b35-b2ac-2006488baab6', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are an expert full-stack web developer AI assistant and a friendly pair programmer. Your job is to generate complete, working web applications based on user requirements, while maintaining a helpful conversational tone.\n\nWhen the user describes what they want, you MUST respond with a valid JSON object containing the files to create/update. The JSON format is:\n\n{\n  "files": [\n    {\n      "filename": "index.html",\n      "content": "<!DOCTYPE html>...",\n      "type": "html"\n    },\n    {\n      "filename": "styles.css", \n      "content": "body { ... }",\n      "type": "css"\n    },\n    {\n      "filename": "script.js",\n      "content": "// JavaScript code...",\n      "type": "js"\n    }\n  ],\n  "description": "A friendly, conversational message (1-3 sentences) describing what you built or changed, followed by a follow-up question to guide the user. For example: \'I\'ve created a modern todo app with a clean dark theme and smooth animations. You can see it in the preview panel on the right! Would you like me to add a feature to filter tasks by status, or change the color scheme?\'"\n}\n\nRules:\n1. Always generate complete, working code - never use placeholders or TODOs\n2. Use modern HTML5, CSS3, and vanilla JavaScript (ES6+)\n3. Make the UI visually appealing with good styling\n4. Ensure the code works standalone in a browser without any build tools\n5. If modifying existing code, include ALL files (even unchanged ones) in your response\n6. For multi-file projects, always include an index.html as the entry point\n7. Use responsive design principles\n8. Add appropriate comments in the code\n9. If the user asks to modify existing code, incorporate their changes while keeping the rest intact\n10. ONLY output the JSON object, no markdown code blocks, no extra text before or after the JSON\n11. The "description" field is CRITICAL - it must be conversational, friendly, and always end with a follow-up question or suggestion to help the user iterate. Think of yourself as a helpful AI pair programmer guiding the user through building their app step by step.\n12. Never put code or technical JSON in the description field - keep it human-readable and encouraging'}, {'role': 'user', 'content': 'Build a todo app with dark theme'}], 'model': 'deepseek-v4-pro', 'max_tokens': 16384, 'stream': True, 'temperature': 0.7}}
+2026-05-29 21:25:13,725 - openai._base_client - DEBUG - Sending HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions
+2026-05-29 21:25:13,726 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-29 21:25:13,726 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-29 21:25:13,726 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-29 21:25:13,727 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-29 21:25:13,727 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-29 21:25:13,798 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Date', b'Sat, 30 May 2026 04:25:13 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'X-Oneapi-Request-Id', b'2026052921251373614758323157743'), (b'X-Oneapi-Trans-Id', b'34960889052398018'), (b'X-Request-Id', b'2026052921251373614758323157743'), (b'cf-cache-status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a03af944ce2a3760-LAX')])
+2026-05-29 21:25:13,799 - httpx - INFO - HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2026-05-29 21:25:13,799 - openai._base_client - DEBUG - HTTP Response: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "403 Forbidden" Headers({'date': 'Sat, 30 May 2026 04:25:13 GMT', 'content-type': 'application/json; charset=utf-8', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'x-oneapi-request-id': '2026052921251373614758323157743', 'x-oneapi-trans-id': '34960889052398018', 'x-request-id': '2026052921251373614758323157743', 'cf-cache-status': 'DYNAMIC', 'content-encoding': 'gzip', 'server': 'cloudflare', 'cf-ray': 'a03af944ce2a3760-LAX'})
+2026-05-29 21:25:13,800 - openai._base_client - DEBUG - request_id: 2026052921251373614758323157743
+2026-05-29 21:25:13,800 - openai._base_client - DEBUG - Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/openai/_base_client.py", line 1646, in request
+    response.raise_for_status()
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://llmapi-api.deepwisdom.ai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-05-29 21:25:13,801 - openai._base_client - DEBUG - Not retrying
+2026-05-29 21:25:13,801 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-29 21:25:13,801 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-29 21:25:13,801 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-29 21:25:13,802 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-29 21:25:13,802 - openai._base_client - DEBUG - Re-raising status error
+2026-05-29 21:25:13,802 - services.aihub - ERROR - gentxt_stream error: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052921251373614758323157743)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}
+2026-05-29 21:25:13,802 - routers.ai_generate - WARNING - Model deepseek-v4-pro failed: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052921251373614758323157743)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}, trying next model
+2026-05-29 21:25:13,804 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-3c93238d-02f7-4c80-8d69-358371bddb91', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are an expert full-stack web developer AI assistant and a friendly pair programmer. Your job is to generate complete, working web applications based on user requirements, while maintaining a helpful conversational tone.\n\nWhen the user describes what they want, you MUST respond with a valid JSON object containing the files to create/update. The JSON format is:\n\n{\n  "files": [\n    {\n      "filename": "index.html",\n      "content": "<!DOCTYPE html>...",\n      "type": "html"\n    },\n    {\n      "filename": "styles.css", \n      "content": "body { ... }",\n      "type": "css"\n    },\n    {\n      "filename": "script.js",\n      "content": "// JavaScript code...",\n      "type": "js"\n    }\n  ],\n  "description": "A friendly, conversational message (1-3 sentences) describing what you built or changed, followed by a follow-up question to guide the user. For example: \'I\'ve created a modern todo app with a clean dark theme and smooth animations. You can see it in the preview panel on the right! Would you like me to add a feature to filter tasks by status, or change the color scheme?\'"\n}\n\nRules:\n1. Always generate complete, working code - never use placeholders or TODOs\n2. Use modern HTML5, CSS3, and vanilla JavaScript (ES6+)\n3. Make the UI visually appealing with good styling\n4. Ensure the code works standalone in a browser without any build tools\n5. If modifying existing code, include ALL files (even unchanged ones) in your response\n6. For multi-file projects, always include an index.html as the entry point\n7. Use responsive design principles\n8. Add appropriate comments in the code\n9. If the user asks to modify existing code, incorporate their changes while keeping the rest intact\n10. ONLY output the JSON object, no markdown code blocks, no extra text before or after the JSON\n11. The "description" field is CRITICAL - it must be conversational, friendly, and always end with a follow-up question or suggestion to help the user iterate. Think of yourself as a helpful AI pair programmer guiding the user through building their app step by step.\n12. Never put code or technical JSON in the description field - keep it human-readable and encouraging'}, {'role': 'user', 'content': 'Build a todo app with dark theme'}], 'model': 'gpt-5.4', 'max_tokens': 16384, 'stream': True, 'temperature': 0.7}}
+2026-05-29 21:25:13,804 - openai._base_client - DEBUG - Sending HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions
+2026-05-29 21:25:13,805 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-29 21:25:13,805 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-29 21:25:13,806 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-29 21:25:13,806 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-29 21:25:13,806 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-29 21:25:13,828 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Date', b'Sat, 30 May 2026 04:25:13 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'X-Oneapi-Request-Id', b'2026052921251381371897901525192'), (b'X-Oneapi-Trans-Id', b'34960889186615748'), (b'X-Request-Id', b'2026052921251381371897901525192'), (b'cf-cache-status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a03af9454f373760-LAX')])
+2026-05-29 21:25:13,829 - httpx - INFO - HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2026-05-29 21:25:13,829 - openai._base_client - DEBUG - HTTP Response: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "403 Forbidden" Headers({'date': 'Sat, 30 May 2026 04:25:13 GMT', 'content-type': 'application/json; charset=utf-8', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'x-oneapi-request-id': '2026052921251381371897901525192', 'x-oneapi-trans-id': '34960889186615748', 'x-request-id': '2026052921251381371897901525192', 'cf-cache-status': 'DYNAMIC', 'content-encoding': 'gzip', 'server': 'cloudflare', 'cf-ray': 'a03af9454f373760-LAX'})
+2026-05-29 21:25:13,829 - openai._base_client - DEBUG - request_id: 2026052921251381371897901525192
+2026-05-29 21:25:13,829 - openai._base_client - DEBUG - Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/openai/_base_client.py", line 1646, in request
+    response.raise_for_status()
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://llmapi-api.deepwisdom.ai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-05-29 21:25:13,829 - openai._base_client - DEBUG - Not retrying
+2026-05-29 21:25:13,830 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-29 21:25:13,830 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-29 21:25:13,830 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-29 21:25:13,831 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-29 21:25:13,831 - openai._base_client - DEBUG - Re-raising status error
+2026-05-29 21:25:13,831 - services.aihub - ERROR - gentxt_stream error: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052921251381371897901525192)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}
+2026-05-29 21:25:13,831 - routers.ai_generate - WARNING - Model gpt-5.4 failed: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052921251381371897901525192)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}, trying next model
+2026-05-29 21:25:13,831 - routers.ai_generate - ERROR - All AI models failed. Last error: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052921251381371897901525192)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}
+2026-05-29 21:25:13,946 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:25:13,947 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 21:25:13,947 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 21:25:13,947 - routers.conversations - DEBUG - Querying conversationss: query={"project_id":9}, sort=created_at, skip=0, limit=200, fields=None
+2026-05-29 21:25:14,464 - routers.conversations - DEBUG - Found 3 conversationss
+2026-05-29 21:25:14,465 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5185s
+2026-05-29 21:25:14,776 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 21:25:14,776 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 21:25:14,776 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 21:25:14,777 - routers.versions - DEBUG - Querying versionss: query={"project_id":9}, sort=-version_number, skip=0, limit=50, fields=None
+2026-05-29 21:25:15,300 - routers.versions - DEBUG - Found 0 versionss
+2026-05-29 21:25:15,301 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5250s
+2026-05-29 21:39:31,808 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-29 21:39:31,809 - core.database - INFO - Database connection closed and engine disposed
+2026-05-29 21:39:31,809 - services.database - INFO - Database connections closed
+2026-05-29 21:39:31,809 - services.database - DEBUG - [DB_OP] Database close completed in 0.0014s

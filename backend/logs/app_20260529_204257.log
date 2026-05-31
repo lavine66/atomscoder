@@ -1,0 +1,205 @@
+2026-05-29 20:42:57,716 - main - INFO - === Logging system initialized ===
+2026-05-29 20:42:57,717 - main - INFO - Log file: logs/app_20260529_204257.log
+2026-05-29 20:42:57,717 - main - INFO - Log level: INFO
+2026-05-29 20:42:57,718 - main - INFO - Timestamp: 20260529_204257
+2026-05-29 20:42:58,665 - main - INFO - Included router: routers.ai_generate.router
+2026-05-29 20:42:58,687 - main - INFO - Included router: routers.aihub.router
+2026-05-29 20:42:58,702 - main - INFO - Included router: routers.auth.router
+2026-05-29 20:42:58,754 - main - INFO - Included router: routers.conversations.router
+2026-05-29 20:42:58,756 - main - INFO - Included router: routers.health.router
+2026-05-29 20:42:58,803 - main - INFO - Included router: routers.project_files.router
+2026-05-29 20:42:58,855 - main - INFO - Included router: routers.projects.router
+2026-05-29 20:42:58,862 - main - INFO - Included router: routers.publish.router
+2026-05-29 20:42:58,886 - main - INFO - Included router: routers.settings.router
+2026-05-29 20:42:58,931 - main - INFO - Included router: routers.storage.router
+2026-05-29 20:42:58,940 - main - INFO - Included router: routers.user.router
+2026-05-29 20:42:58,988 - main - INFO - Included router: routers.versions.router
+2026-05-29 20:42:58,989 - main - INFO - === Application startup initiated ===
+2026-05-29 20:42:58,990 - services.database - INFO - Ignore creating tables
+2026-05-29 20:42:58,990 - services.mock_data - INFO - Ignore initialize data
+2026-05-29 20:42:58,990 - services.auth - INFO - Ignore initialize admin
+2026-05-29 20:42:58,990 - main - INFO - === Application startup completed successfully ===
+2026-05-29 20:43:48,297 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-29 20:43:52,212 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:43:52,212 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-29 20:43:52,212 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-29 20:43:52,212 - core.database - INFO - Starting database initialization...
+2026-05-29 20:43:52,212 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-29 20:43:52,213 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-29 20:43:52,214 - core.database - INFO - Creating async database engine...
+2026-05-29 20:43:52,214 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-29 20:43:52,252 - core.database - INFO - Database engine created successfully
+2026-05-29 20:43:52,252 - core.database - INFO - Creating async session maker...
+2026-05-29 20:43:52,252 - core.database - INFO - Async session maker created successfully
+2026-05-29 20:43:52,252 - core.database - INFO - Database connection initialized successfully
+2026-05-29 20:43:52,252 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-29 20:43:52,252 - core.database - INFO - 🔧 Starting table creation...
+2026-05-29 20:43:54,021 - core.database - INFO - Tables initialized successfully
+2026-05-29 20:43:54,021 - core.database - DEBUG - [DB_OP] Create tables completed in 1.7690s
+2026-05-29 20:43:54,085 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-29 20:43:54,085 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.8734s
+2026-05-29 20:43:54,812 - routers.auth - DEBUG - [get_dynamic_backend_url] mgx-external-domain=None, x-forwarded-host=fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev, host=localhost, scheme=https, dynamic_url=https://fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev
+2026-05-29 20:43:54,812 - routers.auth - INFO - [login] Starting OIDC flow with redirect_uri=https://fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev/api/v1/auth/callback
+2026-05-29 20:43:54,812 - core.config - DEBUG - Read dynamic attribute oidc_client_id from environment variable OIDC_CLIENT_ID
+2026-05-29 20:43:54,812 - core.config - DEBUG - Read dynamic attribute oidc_scope from environment variable OIDC_SCOPE
+2026-05-29 20:43:54,812 - core.config - DEBUG - Read dynamic attribute oidc_issuer_url from environment variable OIDC_ISSUER_URL
+2026-05-29 20:43:54,813 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.6012s
+2026-05-29 20:43:55,321 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:43:55,322 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-29 20:43:55,769 - routers.auth - DEBUG - [get_dynamic_backend_url] mgx-external-domain=None, x-forwarded-host=fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev, host=localhost, scheme=https, dynamic_url=https://fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev
+2026-05-29 20:43:55,769 - routers.auth - INFO - [login] Starting OIDC flow with redirect_uri=https://fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev/api/v1/auth/callback
+2026-05-29 20:43:55,770 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4483s
+2026-05-29 20:44:01,330 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:44:01,330 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-29 20:44:01,331 - routers.auth - DEBUG - [get_dynamic_backend_url] mgx-external-domain=None, x-forwarded-host=fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev, host=localhost, scheme=https, dynamic_url=https://fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev
+2026-05-29 20:44:01,970 - routers.auth - INFO - [callback] Exchanging code for tokens with redirect_uri=https://fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev/api/v1/auth/callback
+2026-05-29 20:44:01,971 - core.config - DEBUG - Read dynamic attribute oidc_client_secret from environment variable OIDC_CLIENT_SECRET
+2026-05-29 20:44:02,137 - httpcore.connection - DEBUG - connect_tcp.started host='auth.atoms.dev' port=443 local_address=None timeout=5.0 socket_options=None
+2026-05-29 20:44:02,160 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fba210f1930>
+2026-05-29 20:44:02,160 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7fba2122bec0> server_hostname='auth.atoms.dev' timeout=5.0
+2026-05-29 20:44:02,173 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fba210f1690>
+2026-05-29 20:44:02,173 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-29 20:44:02,174 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-29 20:44:02,174 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-29 20:44:02,174 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-29 20:44:02,174 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-29 20:44:02,652 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 30 May 2026 03:44:02 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'x-response-time', b'0.067s'), (b'x-request-id', b'FlKTBSFuFSQsYt6P5eABeWX-9GaKJtlS-vzwSgbhqpQ'), (b'cf-cache-status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a03abced9a6601d9-LAX')])
+2026-05-29 20:44:02,653 - httpx - INFO - HTTP Request: POST https://auth.atoms.dev/api/v1/oidc/token "HTTP/1.1 200 OK"
+2026-05-29 20:44:02,654 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-29 20:44:02,655 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-29 20:44:02,655 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-29 20:44:02,656 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-29 20:44:02,656 - httpcore.connection - DEBUG - close.started
+2026-05-29 20:44:02,657 - httpcore.connection - DEBUG - close.complete
+2026-05-29 20:44:02,681 - core.auth - INFO - Fetching JWKS from: https://auth.atoms.dev/api/v1/oidc/.well-known/jwks.json
+2026-05-29 20:44:02,683 - httpcore.connection - DEBUG - connect_tcp.started host='auth.atoms.dev' port=443 local_address=None timeout=60.0 socket_options=None
+2026-05-29 20:44:02,774 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fba210f3310>
+2026-05-29 20:44:02,775 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7fba2122b540> server_hostname='auth.atoms.dev' timeout=60.0
+2026-05-29 20:44:02,786 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fba210f30a0>
+2026-05-29 20:44:02,787 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2026-05-29 20:44:02,787 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-29 20:44:02,787 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2026-05-29 20:44:02,787 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-29 20:44:02,788 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2026-05-29 20:44:03,014 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 30 May 2026 03:44:03 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'cache-control', b'public, max-age=3600'), (b'x-response-time', b'0.001s'), (b'x-request-id', b'aea9a255015812cadf55f9ecc4857f9d'), (b'cf-cache-status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a03abcf16f792f11-LAX')])
+2026-05-29 20:44:03,015 - httpx - INFO - HTTP Request: GET https://auth.atoms.dev/api/v1/oidc/.well-known/jwks.json "HTTP/1.1 200 OK"
+2026-05-29 20:44:03,015 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2026-05-29 20:44:03,711 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-29 20:44:03,711 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-29 20:44:03,711 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-29 20:44:03,712 - core.auth - INFO - Successfully fetched JWKS with 1 keys
+2026-05-29 20:44:03,712 - httpcore.connection - DEBUG - close.started
+2026-05-29 20:44:03,712 - httpcore.connection - DEBUG - close.complete
+2026-05-29 20:44:03,721 - core.auth - INFO - ID token successfully validated for user hash: 77856f5d
+2026-05-29 20:44:03,722 - services.auth - DEBUG - [DB_OP] Starting get_or_create_user - platform_sub: 1281611
+2026-05-29 20:44:04,104 - services.auth - DEBUG - [DB_OP] User lookup completed in 0.3826s - found: True
+2026-05-29 20:44:04,105 - services.auth - DEBUG - [DB_OP] Starting user commit/refresh
+2026-05-29 20:44:04,620 - services.auth - DEBUG - [DB_OP] User commit/refresh completed in 0.5153s
+2026-05-29 20:44:04,621 - core.config - DEBUG - Read dynamic attribute jwt_expire_minutes from environment variable JWT_EXPIRE_MINUTES
+2026-05-29 20:44:04,621 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-29 20:44:04,622 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-29 20:44:04,622 - core.auth - DEBUG - Authentication token created for user hash: 77856f5d
+2026-05-29 20:44:04,622 - routers.auth - INFO - [callback] OIDC callback successful, redirecting to https://fyuxsd-c008791342bb41f6aeb35865fcdc9cbb-preview.app.atoms.dev/auth/callback?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjgxNjExIiwiZW1haWwiOiJsaXVqaWF4aW44NDkyMTc4OTBAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwibmFtZSI6ImxpdWppYXhpbjg0OTIxNzg5MCIsImxhc3RfbG9naW4iOiIyMDI2LTA1LTMwVDAzOjQ0OjA0LjEwNTI4NiswMDowMCIsImV4cCI6MTc4MjcwNDY0NCwiaWF0IjoxNzgwMTEyNjQ0LCJuYmYiOjE3ODAxMTI2NDR9.XvDF914_-Y4mi75fWvedEgQsLSzcwz0Ke0aQ9fQARHQ&expires_at=1782704644&token_type=Bearer
+2026-05-29 20:44:04,623 - core.database - DEBUG - [DB_OP] Database session cleanup after 3.2933s
+2026-05-29 20:44:10,022 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:10,338 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:10,339 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:44:10,339 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:44:10,339 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-29 20:44:10,852 - routers.projects - DEBUG - Found 8 projectss
+2026-05-29 20:44:10,852 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5137s
+2026-05-29 20:44:17,310 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:17,310 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:44:17,311 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:44:17,311 - routers.projects - DEBUG - Creating new projects with data: name='test6' description='' status='active' published_url=''
+2026-05-29 20:44:18,144 - services.projects - INFO - Created projects with id: 9
+2026-05-29 20:44:18,145 - routers.projects - INFO - Projects created successfully with id: 9
+2026-05-29 20:44:18,146 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8351s
+2026-05-29 20:44:18,459 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:18,771 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:18,771 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:44:18,771 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:44:18,771 - routers.projects - DEBUG - Fetching projects with id: 9, fields=None
+2026-05-29 20:44:19,154 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3826s
+2026-05-29 20:44:19,463 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:19,464 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:44:19,464 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:44:19,464 - routers.project_files - DEBUG - Querying project_filess: query={"project_id":9}, sort=None, skip=0, limit=100, fields=None
+2026-05-29 20:44:19,953 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:19,954 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:44:19,954 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-29 20:44:19,955 - routers.conversations - DEBUG - Creating new conversations with data: project_id=9 role='user' content='Build a todo app with dark theme'
+2026-05-29 20:44:19,987 - routers.project_files - DEBUG - Found 0 project_filess
+2026-05-29 20:44:19,988 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5240s
+2026-05-29 20:44:20,290 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:20,291 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:44:20,296 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0051s
+2026-05-29 20:44:20,297 - routers.conversations - DEBUG - Querying conversationss: query={"project_id":9}, sort=created_at, skip=0, limit=200, fields=None
+2026-05-29 20:44:20,812 - routers.conversations - DEBUG - Found 1 conversationss
+2026-05-29 20:44:20,813 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5220s
+2026-05-29 20:44:21,106 - services.conversations - INFO - Created conversations with id: 19
+2026-05-29 20:44:21,106 - routers.conversations - INFO - Conversations created successfully with id: 19
+2026-05-29 20:44:21,107 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.1531s
+2026-05-29 20:44:21,295 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:21,295 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:44:21,296 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-29 20:44:21,296 - routers.versions - DEBUG - Querying versionss: query={"project_id":9}, sort=-version_number, skip=0, limit=50, fields=None
+2026-05-29 20:44:21,416 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:44:21,416 - core.config - DEBUG - Read dynamic attribute app_ai_base_url from environment variable APP_AI_BASE_URL
+2026-05-29 20:44:21,416 - core.config - DEBUG - Read dynamic attribute app_ai_key from environment variable APP_AI_KEY
+2026-05-29 20:44:22,229 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-d02baeb7-cbb3-496f-a280-59a9a8b540d4', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are an expert full-stack web developer AI assistant and a friendly pair programmer. Your job is to generate complete, working web applications based on user requirements, while maintaining a helpful conversational tone.\n\nWhen the user describes what they want, you MUST respond with a valid JSON object containing the files to create/update. The JSON format is:\n\n{\n  "files": [\n    {\n      "filename": "index.html",\n      "content": "<!DOCTYPE html>...",\n      "type": "html"\n    },\n    {\n      "filename": "styles.css", \n      "content": "body { ... }",\n      "type": "css"\n    },\n    {\n      "filename": "script.js",\n      "content": "// JavaScript code...",\n      "type": "js"\n    }\n  ],\n  "description": "A friendly, conversational message (1-3 sentences) describing what you built or changed, followed by a follow-up question to guide the user. For example: \'I\'ve created a modern todo app with a clean dark theme and smooth animations. You can see it in the preview panel on the right! Would you like me to add a feature to filter tasks by status, or change the color scheme?\'"\n}\n\nRules:\n1. Always generate complete, working code - never use placeholders or TODOs\n2. Use modern HTML5, CSS3, and vanilla JavaScript (ES6+)\n3. Make the UI visually appealing with good styling\n4. Ensure the code works standalone in a browser without any build tools\n5. If modifying existing code, include ALL files (even unchanged ones) in your response\n6. For multi-file projects, always include an index.html as the entry point\n7. Use responsive design principles\n8. Add appropriate comments in the code\n9. If the user asks to modify existing code, incorporate their changes while keeping the rest intact\n10. ONLY output the JSON object, no markdown code blocks, no extra text before or after the JSON\n11. The "description" field is CRITICAL - it must be conversational, friendly, and always end with a follow-up question or suggestion to help the user iterate. Think of yourself as a helpful AI pair programmer guiding the user through building their app step by step.\n12. Never put code or technical JSON in the description field - keep it human-readable and encouraging'}, {'role': 'user', 'content': 'Build a todo app with dark theme'}], 'model': 'claude-opus-4.6', 'max_tokens': 16384, 'stream': True, 'temperature': 0.7}}
+2026-05-29 20:44:22,230 - openai._base_client - DEBUG - Sending HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions
+2026-05-29 20:44:22,231 - httpcore.connection - DEBUG - connect_tcp.started host='llmapi-api.deepwisdom.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2026-05-29 20:44:22,249 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fba20c20d30>
+2026-05-29 20:44:22,250 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7fba211e3e40> server_hostname='llmapi-api.deepwisdom.ai' timeout=5.0
+2026-05-29 20:44:22,259 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7fba20c20430>
+2026-05-29 20:44:22,260 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-29 20:44:22,260 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-29 20:44:22,260 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-29 20:44:22,261 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-29 20:44:22,261 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-29 20:44:22,330 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 403, b'Forbidden', [(b'Date', b'Sat, 30 May 2026 03:44:22 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'X-Oneapi-Request-Id', b'2026052920442231319437844384494'), (b'X-Oneapi-Trans-Id', b'34956776252113346'), (b'X-Request-Id', b'2026052920442231319437844384494'), (b'cf-cache-status', b'DYNAMIC'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a03abd6b2b50db59-LAX')])
+2026-05-29 20:44:22,332 - httpx - INFO - HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2026-05-29 20:44:22,332 - openai._base_client - DEBUG - HTTP Response: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "403 Forbidden" Headers({'date': 'Sat, 30 May 2026 03:44:22 GMT', 'content-type': 'application/json; charset=utf-8', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'x-oneapi-request-id': '2026052920442231319437844384494', 'x-oneapi-trans-id': '34956776252113346', 'x-request-id': '2026052920442231319437844384494', 'cf-cache-status': 'DYNAMIC', 'content-encoding': 'gzip', 'server': 'cloudflare', 'cf-ray': 'a03abd6b2b50db59-LAX'})
+2026-05-29 20:44:22,333 - openai._base_client - DEBUG - request_id: 2026052920442231319437844384494
+2026-05-29 20:44:22,333 - openai._base_client - DEBUG - Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/openai/_base_client.py", line 1646, in request
+    response.raise_for_status()
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://llmapi-api.deepwisdom.ai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+2026-05-29 20:44:22,335 - openai._base_client - DEBUG - Not retrying
+2026-05-29 20:44:22,335 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-29 20:44:22,336 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-29 20:44:22,336 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-29 20:44:22,336 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-29 20:44:22,336 - openai._base_client - DEBUG - Re-raising status error
+2026-05-29 20:44:22,339 - services.aihub - ERROR - gentxt_stream error: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052920442231319437844384494)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}
+2026-05-29 20:44:22,339 - routers.ai_generate - ERROR - AI generation failed: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052920442231319437844384494)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}
+Traceback (most recent call last):
+  File "/workspace/app/backend/routers/ai_generate.py", line 98, in generate_code
+    async for chunk in service.gentxt_stream(request):
+  File "/workspace/app/backend/services/aihub.py", line 168, in gentxt_stream
+    stream = await client.chat.completions.create(
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py", line 2678, in create
+    return await self._post(
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/openai/_base_client.py", line 1881, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+  File "/data/chats/c008791342bb41f6aeb35865fcdc9cbb/.cache/python/lib/python3.10/site-packages/openai/_base_client.py", line 1666, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.PermissionDeniedError: Error code: 403 - {'error': {'message': 'AI balance is insufficient to finish the operation. Please go to the settings to top up. (request id: 2026052920442231319437844384494)', 'type': 'one_api_error', 'param': '', 'code': 'insufficient_ai_balance'}}
+2026-05-29 20:44:22,611 - routers.versions - DEBUG - Found 0 versionss
+2026-05-29 20:44:22,612 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.3164s
+2026-05-29 20:45:27,459 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:45:27,773 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:45:27,773 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:45:27,774 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-29 20:45:27,774 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-29 20:45:28,285 - routers.projects - DEBUG - Found 9 projectss
+2026-05-29 20:45:28,286 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5126s
+2026-05-29 20:46:10,517 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-29 20:46:10,651 - core.database - INFO - Database connection closed and engine disposed
+2026-05-29 20:46:10,651 - services.database - INFO - Database connections closed
+2026-05-29 20:46:10,651 - services.database - DEBUG - [DB_OP] Database close completed in 0.1345s

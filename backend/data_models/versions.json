@@ -1,0 +1,37 @@
+{
+    "title": "versions",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "project_id": {
+            "type": "integer",
+            "description": "Associated project ID"
+        },
+        "version_number": {
+            "type": "integer",
+            "description": "Version number"
+        },
+        "snapshot": {
+            "type": "string",
+            "description": "JSON snapshot of all files at this version"
+        },
+        "message": {
+            "type": "string",
+            "description": "Version description/commit message"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "project_id",
+        "version_number",
+        "snapshot"
+    ]
+}

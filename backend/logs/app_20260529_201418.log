@@ -1,0 +1,25 @@
+2026-05-29 20:14:18,742 - main - INFO - === Logging system initialized ===
+2026-05-29 20:14:18,742 - main - INFO - Log file: logs/app_20260529_201418.log
+2026-05-29 20:14:18,743 - main - INFO - Log level: INFO
+2026-05-29 20:14:18,743 - main - INFO - Timestamp: 20260529_201418
+2026-05-29 20:14:19,680 - main - INFO - Included router: routers.ai_generate.router
+2026-05-29 20:14:19,701 - main - INFO - Included router: routers.aihub.router
+2026-05-29 20:14:19,714 - main - INFO - Included router: routers.auth.router
+2026-05-29 20:14:19,765 - main - INFO - Included router: routers.conversations.router
+2026-05-29 20:14:19,769 - main - INFO - Included router: routers.health.router
+2026-05-29 20:14:19,822 - main - INFO - Included router: routers.project_files.router
+2026-05-29 20:14:19,883 - main - INFO - Included router: routers.projects.router
+2026-05-29 20:14:19,914 - main - INFO - Included router: routers.publish.router
+2026-05-29 20:14:19,937 - main - INFO - Included router: routers.settings.router
+2026-05-29 20:14:19,986 - main - INFO - Included router: routers.storage.router
+2026-05-29 20:14:19,999 - main - INFO - Included router: routers.user.router
+2026-05-29 20:14:20,108 - main - INFO - Included router: routers.versions.router
+2026-05-29 20:14:20,109 - main - INFO - === Application startup initiated ===
+2026-05-29 20:14:20,109 - services.database - INFO - Ignore creating tables
+2026-05-29 20:14:20,109 - services.mock_data - INFO - Ignore initialize data
+2026-05-29 20:14:20,109 - services.auth - INFO - Ignore initialize admin
+2026-05-29 20:14:20,109 - main - INFO - === Application startup completed successfully ===
+2026-05-29 20:14:26,844 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-29 20:14:55,316 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-29 20:14:55,316 - services.database - INFO - Database connections closed
+2026-05-29 20:14:55,317 - services.database - DEBUG - [DB_OP] Database close completed in 0.0004s

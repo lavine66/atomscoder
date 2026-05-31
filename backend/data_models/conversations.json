@@ -1,0 +1,33 @@
+{
+    "title": "conversations",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "project_id": {
+            "type": "integer",
+            "description": "Associated project ID"
+        },
+        "role": {
+            "type": "string",
+            "description": "Message role: user or assistant"
+        },
+        "content": {
+            "type": "string",
+            "description": "Message content"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "project_id",
+        "role",
+        "content"
+    ]
+}

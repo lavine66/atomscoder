@@ -1,0 +1,37 @@
+{
+    "title": "project_files",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "project_id": {
+            "type": "integer",
+            "description": "Associated project ID"
+        },
+        "filename": {
+            "type": "string",
+            "description": "File name e.g. index.html"
+        },
+        "content": {
+            "type": "string",
+            "description": "File content"
+        },
+        "file_type": {
+            "type": "string",
+            "description": "File type: html, css, js, json"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "project_id",
+        "filename",
+        "content"
+    ]
+}

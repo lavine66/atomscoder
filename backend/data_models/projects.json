@@ -1,0 +1,35 @@
+{
+    "title": "projects",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "name": {
+            "type": "string",
+            "description": "Project name"
+        },
+        "description": {
+            "type": "string",
+            "description": "Project description"
+        },
+        "status": {
+            "type": "string",
+            "description": "Project status: active, archived"
+        },
+        "published_url": {
+            "type": "string",
+            "description": "Published URL if deployed"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "name"
+    ]
+}

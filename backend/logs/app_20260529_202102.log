@@ -1,0 +1,179 @@
+2026-05-29 20:21:02,537 - main - INFO - === Logging system initialized ===
+2026-05-29 20:21:02,537 - main - INFO - Log file: logs/app_20260529_202102.log
+2026-05-29 20:21:02,537 - main - INFO - Log level: INFO
+2026-05-29 20:21:02,538 - main - INFO - Timestamp: 20260529_202102
+2026-05-29 20:21:03,331 - main - INFO - Included router: routers.ai_generate.router
+2026-05-29 20:21:03,350 - main - INFO - Included router: routers.aihub.router
+2026-05-29 20:21:03,363 - main - INFO - Included router: routers.auth.router
+2026-05-29 20:21:03,409 - main - INFO - Included router: routers.conversations.router
+2026-05-29 20:21:03,410 - main - INFO - Included router: routers.health.router
+2026-05-29 20:21:03,455 - main - INFO - Included router: routers.project_files.router
+2026-05-29 20:21:03,520 - main - INFO - Included router: routers.projects.router
+2026-05-29 20:21:03,530 - main - INFO - Included router: routers.publish.router
+2026-05-29 20:21:03,551 - main - INFO - Included router: routers.settings.router
+2026-05-29 20:21:03,597 - main - INFO - Included router: routers.storage.router
+2026-05-29 20:21:03,606 - main - INFO - Included router: routers.user.router
+2026-05-29 20:21:03,654 - main - INFO - Included router: routers.versions.router
+2026-05-29 20:21:03,655 - main - INFO - === Application startup initiated ===
+2026-05-29 20:21:03,655 - services.database - INFO - Ignore creating tables
+2026-05-29 20:21:03,655 - services.mock_data - INFO - Ignore initialize data
+2026-05-29 20:21:03,655 - services.auth - INFO - Ignore initialize admin
+2026-05-29 20:21:03,656 - main - INFO - === Application startup completed successfully ===
+2026-05-29 20:21:12,699 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-29 20:21:12,700 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-29 20:21:12,717 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:13,070 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:13,070 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:13,070 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-29 20:21:13,070 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-29 20:21:13,070 - core.database - INFO - Starting database initialization...
+2026-05-29 20:21:13,070 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-29 20:21:13,071 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-29 20:21:13,071 - core.database - INFO - Creating async database engine...
+2026-05-29 20:21:13,072 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-29 20:21:13,122 - core.database - INFO - Database engine created successfully
+2026-05-29 20:21:13,122 - core.database - INFO - Creating async session maker...
+2026-05-29 20:21:13,123 - core.database - INFO - Async session maker created successfully
+2026-05-29 20:21:13,123 - core.database - INFO - Database connection initialized successfully
+2026-05-29 20:21:13,123 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-29 20:21:13,123 - core.database - INFO - 🔧 Starting table creation...
+2026-05-29 20:21:14,720 - core.database - INFO - Tables initialized successfully
+2026-05-29 20:21:14,721 - core.database - DEBUG - [DB_OP] Create tables completed in 1.5986s
+2026-05-29 20:21:14,786 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-29 20:21:14,786 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.7164s
+2026-05-29 20:21:14,787 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-29 20:21:15,459 - routers.projects - DEBUG - Found 2 projectss
+2026-05-29 20:21:15,460 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.3901s
+2026-05-29 20:21:33,754 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:33,754 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:33,755 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:21:33,755 - routers.projects - DEBUG - Creating new projects with data: name='test new' description='' status='active' published_url=''
+2026-05-29 20:21:33,813 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:33,813 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:33,813 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:21:33,813 - routers.projects - DEBUG - Creating new projects with data: name='testnew' description='' status='active' published_url=''
+2026-05-29 20:21:34,269 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:34,270 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:34,270 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-29 20:21:34,271 - routers.projects - DEBUG - Creating new projects with data: name='testnew' description='' status='active' published_url=''
+2026-05-29 20:21:34,630 - services.projects - INFO - Created projects with id: 3
+2026-05-29 20:21:34,630 - routers.projects - INFO - Projects created successfully with id: 3
+2026-05-29 20:21:34,632 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8774s
+2026-05-29 20:21:34,974 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:35,018 - services.projects - INFO - Created projects with id: 4
+2026-05-29 20:21:35,018 - routers.projects - INFO - Projects created successfully with id: 4
+2026-05-29 20:21:35,019 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.2056s
+2026-05-29 20:21:35,277 - services.projects - INFO - Created projects with id: 5
+2026-05-29 20:21:35,278 - routers.projects - INFO - Projects created successfully with id: 5
+2026-05-29 20:21:35,279 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.0093s
+2026-05-29 20:21:35,464 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:35,495 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:35,495 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:35,497 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0015s
+2026-05-29 20:21:35,498 - routers.projects - DEBUG - Fetching projects with id: 3, fields=None
+2026-05-29 20:21:35,946 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4504s
+2026-05-29 20:21:36,020 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:36,044 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:36,045 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:36,046 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0014s
+2026-05-29 20:21:36,047 - routers.projects - DEBUG - Fetching projects with id: 4, fields=None
+2026-05-29 20:21:36,285 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:36,285 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:36,286 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:21:36,286 - routers.project_files - DEBUG - Querying project_filess: query={"project_id":3}, sort=None, skip=0, limit=100, fields=None
+2026-05-29 20:21:36,432 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3873s
+2026-05-29 20:21:36,526 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:36,526 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:36,526 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-29 20:21:36,527 - routers.conversations - DEBUG - Creating new conversations with data: project_id=5 role='user' content='Build a todo app with dark theme'
+2026-05-29 20:21:36,609 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:36,610 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:36,610 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-29 20:21:36,610 - routers.projects - DEBUG - Fetching projects with id: 5, fields=None
+2026-05-29 20:21:36,798 - routers.project_files - DEBUG - Found 0 project_filess
+2026-05-29 20:21:36,799 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5130s
+2026-05-29 20:21:36,930 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3207s
+2026-05-29 20:21:37,131 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:37,132 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:37,132 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:21:37,132 - routers.project_files - DEBUG - Querying project_filess: query={"project_id":4}, sort=None, skip=0, limit=100, fields=None
+2026-05-29 20:21:37,239 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:37,240 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:37,240 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:21:37,240 - routers.project_files - DEBUG - Querying project_filess: query={"project_id":5}, sort=None, skip=0, limit=100, fields=None
+2026-05-29 20:21:37,340 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:37,340 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:37,340 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:21:37,341 - routers.conversations - DEBUG - Querying conversationss: query={"project_id":3}, sort=created_at, skip=0, limit=200, fields=None
+2026-05-29 20:21:37,359 - services.conversations - INFO - Created conversations with id: 5
+2026-05-29 20:21:37,359 - routers.conversations - INFO - Conversations created successfully with id: 5
+2026-05-29 20:21:37,359 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8331s
+2026-05-29 20:21:37,643 - routers.project_files - DEBUG - Found 0 project_filess
+2026-05-29 20:21:37,644 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5124s
+2026-05-29 20:21:37,752 - routers.project_files - DEBUG - Found 0 project_filess
+2026-05-29 20:21:37,752 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5127s
+2026-05-29 20:21:37,857 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:37,857 - core.config - DEBUG - Read dynamic attribute app_ai_base_url from environment variable APP_AI_BASE_URL
+2026-05-29 20:21:37,857 - core.config - DEBUG - Read dynamic attribute app_ai_key from environment variable APP_AI_KEY
+2026-05-29 20:21:38,530 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:38,531 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:38,531 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:21:38,531 - routers.conversations - DEBUG - Querying conversationss: query={"project_id":4}, sort=created_at, skip=0, limit=200, fields=None
+2026-05-29 20:21:38,533 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:38,533 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:38,533 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-05-29 20:21:38,534 - routers.conversations - DEBUG - Querying conversationss: query={"project_id":5}, sort=created_at, skip=0, limit=200, fields=None
+2026-05-29 20:21:38,535 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-73c59f2f-0acd-49e5-b156-6ee049b95dba', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are an expert full-stack web developer AI assistant. Your job is to generate complete, working web applications based on user requirements.\n\nWhen the user describes what they want, you MUST respond with a valid JSON object containing the files to create/update. The JSON format is:\n\n{\n  "files": [\n    {\n      "filename": "index.html",\n      "content": "<!DOCTYPE html>...",\n      "type": "html"\n    },\n    {\n      "filename": "styles.css", \n      "content": "body { ... }",\n      "type": "css"\n    },\n    {\n      "filename": "script.js",\n      "content": "// JavaScript code...",\n      "type": "js"\n    }\n  ],\n  "description": "Brief description of what was created/changed"\n}\n\nRules:\n1. Always generate complete, working code - never use placeholders or TODOs\n2. Use modern HTML5, CSS3, and vanilla JavaScript (ES6+)\n3. Make the UI visually appealing with good styling\n4. Ensure the code works standalone in a browser without any build tools\n5. If modifying existing code, include ALL files (even unchanged ones) in your response\n6. For multi-file projects, always include an index.html as the entry point\n7. Use responsive design principles\n8. Add appropriate comments in the code\n9. If the user asks to modify existing code, incorporate their changes while keeping the rest intact\n10. ONLY output the JSON object, no markdown code blocks, no extra text before or after the JSON'}, {'role': 'user', 'content': 'Build a todo app with dark theme'}], 'model': 'claude-opus-4.6', 'max_tokens': 4096, 'stream': True, 'temperature': 0.7}}
+2026-05-29 20:21:38,536 - openai._base_client - DEBUG - Sending HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions
+2026-05-29 20:21:38,537 - httpcore.connection - DEBUG - connect_tcp.started host='llmapi-api.deepwisdom.ai' port=443 local_address=None timeout=5.0 socket_options=None
+2026-05-29 20:21:38,552 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f21ee3d14b0>
+2026-05-29 20:21:38,553 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f21f42ff040> server_hostname='llmapi-api.deepwisdom.ai' timeout=5.0
+2026-05-29 20:21:38,567 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f21ee3d0d30>
+2026-05-29 20:21:38,568 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-29 20:21:38,569 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-29 20:21:38,569 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-29 20:21:38,569 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-29 20:21:38,569 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-29 20:21:38,849 - routers.conversations - DEBUG - Found 0 conversationss
+2026-05-29 20:21:38,850 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.5097s
+2026-05-29 20:21:39,045 - routers.conversations - DEBUG - Found 0 conversationss
+2026-05-29 20:21:39,046 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5145s
+2026-05-29 20:21:39,046 - routers.conversations - DEBUG - Found 1 conversationss
+2026-05-29 20:21:39,048 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5144s
+2026-05-29 20:21:39,245 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:39,246 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:39,246 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:21:39,246 - routers.versions - DEBUG - Querying versionss: query={"project_id":3}, sort=-version_number, skip=0, limit=50, fields=None
+2026-05-29 20:21:39,584 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:39,584 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:39,585 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0001s
+2026-05-29 20:21:39,585 - routers.versions - DEBUG - Querying versionss: query={"project_id":4}, sort=-version_number, skip=0, limit=50, fields=None
+2026-05-29 20:21:39,762 - routers.versions - DEBUG - Found 0 versionss
+2026-05-29 20:21:39,762 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5164s
+2026-05-29 20:21:39,771 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:21:39,771 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:21:39,771 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-29 20:21:39,772 - routers.versions - DEBUG - Querying versionss: query={"project_id":5}, sort=-version_number, skip=0, limit=50, fields=None
+2026-05-29 20:21:40,007 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 30 May 2026 03:21:40 GMT'), (b'Content-Type', b'text/event-stream'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'X-Oneapi-Request-Id', b'2026052920213860540562549608965'), (b'X-Oneapi-Trans-Id', b'34954488326390213'), (b'X-Request-Id', b'2026052920213860540562549608965'), (b'cf-cache-status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a03a9c200bfaf7c7-LAX')])
+2026-05-29 20:21:40,008 - httpx - INFO - HTTP Request: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-29 20:21:40,008 - openai._base_client - DEBUG - HTTP Response: POST https://llmapi-api.deepwisdom.ai/v1/chat/completions "200 OK" Headers({'date': 'Sat, 30 May 2026 03:21:40 GMT', 'content-type': 'text/event-stream', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'x-oneapi-request-id': '2026052920213860540562549608965', 'x-oneapi-trans-id': '34954488326390213', 'x-request-id': '2026052920213860540562549608965', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'cf-ray': 'a03a9c200bfaf7c7-LAX'})
+2026-05-29 20:21:40,008 - openai._base_client - DEBUG - request_id: 2026052920213860540562549608965
+2026-05-29 20:21:40,008 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-29 20:21:40,154 - routers.versions - DEBUG - Found 0 versionss
+2026-05-29 20:21:40,155 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5701s
+2026-05-29 20:21:40,281 - routers.versions - DEBUG - Found 0 versionss
+2026-05-29 20:21:40,281 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5102s
+2026-05-29 20:22:15,450 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-29 20:22:15,450 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-29 20:22:15,451 - httpcore.http11 - DEBUG - receive_response_body.failed exception=GeneratorExit()
+2026-05-29 20:22:17,015 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-29 20:22:17,015 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-29 20:22:17,015 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-29 20:22:17,016 - routers.conversations - DEBUG - Creating new conversations with data: project_id=5 role='assistant' content='```json\n{\n  "files": [\n    {\n      "filename": "index.html",\n      "content": "<!DOCTYPE html>\\n<html lang=\\"en\\">\\n<head>\\n    <meta charset=\\"UTF-8\\">\\n    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\">\\n    <title>Todo App - Dark Theme</title>\\n    <link rel=\\"stylesheet\\" href=\\"styles.css\\">\\n</head>\\n<body>\\n    <div class=\\"container\\">\\n        <header>\\n            <h1>📝 Todo List</h1>\\n            <p class=\\"subtitle\\">Stay organized, get things done</p>\\n        </header>\\n\\n        <div class=\\"input-section\\">\\n            <input type=\\"text\\" id=\\"todoInput\\" placeholder=\\"What needs to be done?\\" autocomplete=\\"off\\">\\n            <button id=\\"addBtn\\" onclick=\\"addTodo()\\">Add</button>\\n        </div>\\n\\n        <div class=\\"filters\\">\\n            <button class=\\"filter-btn active\\" data-filter=\\"all\\" onclick=\\"filterTodos(\'all\')\\">All</button>\\n            <button class=\\"filter-btn\\" data-filter=\\"active\\" onclick=\\"filterTodos(\'active\')\\">Active</button>\\n            <button class=\\"filter-btn\\" data-filter=\\"completed\\" onclick=\\"filterTodos(\'completed\')\\">Completed</button>\\n        </div>\\n\\n        <div class=\\"stats\\">\\n            <span id=\\"taskCount\\">0 tasks</span>\\n            <button id=\\"clearCompleted\\" onclick=\\"clearCompleted()\\">Clear Completed</button>\\n        </div>\\n\\n        <ul id=\\"todoList\\" class=\\"todo-list\\"></ul>\\n\\n        <div id=\\"emptyState\\" class=\\"empty-state\\">\\n            <span class=\\"empty-icon\\">✨</span>\\n            <p>No todos yet. Add one above!</p>\\n        </div>\\n    </div>\\n\\n    <script src=\\"script.js\\"></script>\\n</body>\\n</html>",\n      "type": "html"\n    },\n    {\n      "filename": "styles.css",\n      "content": "/* CSS Reset */\\n* {\\n    margin: 0;\\n    padding: 0;\\n    box-sizing: border-box;\\n}\\n\\n:root {\\n    --bg-primary: #1a1a2e;\\n    --bg-secondary: #16213e;\\n    --bg-tertiary: #0f3460;\\n    --bg-card: #1e2a4a;\\n    --text-primary: #e4e4e4;\\n    --text-secondary: #a0a0b0;\\n    --accent: #e94560;\\n    --accent-hover: #ff6b81;\\n    --success: #4ecdc4;\\n    --border: #2a2a4a;\\n    --shadow: rgba(0, 0, 0, 0.3);\\n    --input-bg: #0f1b33;\\n}\\n\\nbody {\\n    font-family: \'Segoe UI\', Tahoma, Geneva, Verdana, sans-serif;\\n    background: var(--bg-primary);\\n    color: var(--text-primary);\\n    min-height: 100vh;\\n    display: flex;\\n    justify-content: center;\\n    align-items: flex-start;\\n    padding: 40px 20px;\\n    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\\n}\\n\\n.container {\\n    width: 100%;\\n    max-width: 600px;\\n    background: var(--bg-secondary);\\n    border-radius: 20px;\\n    padding: 40px 30px;\\n    box-shadow: 0 20px 60px var(--shadow), 0 0 40px rgba(233, 69, 96, 0.05);\\n    border: 1px solid var(--border);\\n}\\n\\nheader {\\n    text-align: center;\\n    margin-bottom: 30px;\\n}\\n\\nheader h1 {\\n    font-size: 2.2rem;\\n    font-weight: 700;\\n    background: linear-gradient(135deg, var(--accent), var(--accent-hover));\\n    -webkit-background-clip: text;\\n    -webkit-text-fill-color: transparent;\\n    background-clip: text;\\n    margin-bottom: 5px;\\n}\\n\\n.subtitle {\\n    color: var(--text-secondary);\\n    font-size: 0.95rem;\\n}\\n\\n/* Input Section */\\n.input-section {\\n    display: flex;\\n    gap: 12px;\\n    margin-bottom: 20px;\\n}\\n\\n#todoInput {\\n    flex: 1;\\n    padding: 14px 20px;\\n    border: 2px solid var(--border);\\n    border-radius: 12px;\\n    background: var(--input-bg);\\n    color: var(--text-primary);\\n    font-size: 1rem;\\n    outline: none;\\n    transition: border-color 0.3s ease, box-shadow 0.3s ease;\\n}\\n\\n#todoInput:focus {\\n    border-color: var(--accent);\\n    box-shadow: 0 0 15px rgba(233, 69, 96, 0.15);\\n}\\n\\n#todoInput::placeholder {\\n    color: var(--text-secondary);\\n}\\n\\n#addBtn {\\n    padding: 14px 28px;\\n    background: linear-gradient(135deg, var(--accent), #c0392b);\\n    color: white;\\n    border: none;\\n    border-radius: 12px;\\n    font-size: 1rem;\\n    font-weight: 600;\\n    cursor: pointer;\\n    transition: transform 0.2s ease, box-shadow 0.3s ease;\\n}\\n\\n#addBtn:hover {\\n    transform: translateY(-2px);\\n    box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4);\\n}\\n\\n#addBtn:active {\\n    transform: translateY(0);\\n}\\n\\n/* Filters */\\n.filters {\\n    display: flex;\\n    gap: 8px;\\n    margin-bottom: 15px;\\n    justify-content: center;\\n}\\n\\n.filter-btn {\\n    padding: 8px 18px;\\n    background: transparent;\\n    border: 1px solid var(--border);\\n    border-radius: 20px;\\n    color: var(--text-secondary);\\n    cursor: pointer;\\n    font-size: 0.85rem;\\n    transition: all 0.3s ease;\\n}\\n\\n.filter-btn:hover {\\n    border-color: var(--accent);\\n    color: var(--accent);\\n}\\n\\n.filter-btn.active {\\n    background: var(--accent);\\n    border-color: var(--accent);\\n    color: white;\\n}\\n\\n/* Stats */\\n.stats {\\n    display: flex;\\n    justify-content: space-between;\\n    align-items: center;\\n    margin-bottom: 20px;\\n    padding: 10px 5px;\\n    border-bottom: 1px solid var(--border);\\n}\\n\\n#taskCount {\\n    color: var(--text-secondary);\\n    font-size: 0.9rem;\\n}\\n\\n#clearCompleted {\\n    background: none;\\n    border: none;\\n    color: var(--text-secondary);\\n    cursor: pointer;\\n    font-size: 0.85rem;\\n    transition: color 0.3s ease;\\n}\\n\\n#clearCompleted:hover {\\n    color: var(--accent);\\n}\\n\\n/* Todo List */\\n.todo-list {\\n    list-style: none;\\n}\\n\\n.todo-item {\\n    display: flex;\\n    align-items: center;\\n    gap: 12px;\\n    padding: 15px 18px;\\n    background: var(--bg-card);\\n    border-radius: 12px;\\n    margin-bottom: 10px;\\n    border: 1px solid var(--border);\\n    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;\\n    animation: slideIn 0.3s ease;\\n}\\n\\n@keyframes slideIn {\\n    from {\\n        opacity: 0;\\n        transform: translateY(-10px);\\n    }\\n    to {\\n        opacity: 1;\\n        transform: translateY(0);\\n    }\\n}\\n\\n.todo-item:hover {\\n    transform: translateX(5px);\\n    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);\\n}\\n\\n.todo-item.completed .todo-text {\\n    text-decoration: line-through;\\n    color: var(--text-secondary);\\n    opacity: 0.6;\\n}\\n\\n/* Custom Checkbox */\\n.checkbox {\\n    width: 22px;\\n    height: 22px;\\n    border: 2px solid var(--border);\\n    border-radius: 50%;\\n    cursor: pointer;\\n    display: flex;\\n    align-items: center;\\n    justify-content: center;\\n    transition: all 0.3s ease;\\n    flex-shrink: 0;\\n}\\n\\n.checkbox:hover {\\n    border-color: var(--success);\\n}\\n\\n.checkbox.checked {\\n    background: var(--success);\\n    border-color: var(--success);\\n}\\n\\n.checkbox.checked::after {\\n    content: \'✓\';\\n    color: white;\\n    font-size: 12px;\\n    font-weight: bold;\\n}\\n\\n.todo-text {\\n    flex: 1;\\n    font-size: 1rem;\\n    color: var(--text-primary);\\n    word-break: break-word;\\n}\\n\\n.delete-btn {\\n    background: none;\\n    border: none;\\n    color: var(--text-secondary);\\n    cursor: pointer;\\n    font-size: 1.2rem;\\n    padding: 5px;\\n    border-radius: 8px;\\n    transition: all 0.3s ease;\\n    opacity: 0;\\n}\\n\\n.todo-item:hover .delete-btn {\\n    opacity: 1;\\n}\\n\\n.delete-btn:hover {\\n    color: var(--accent);\\n    background: rgba(233, 69, 96, 0.1);\\n}\\n\\n/* Empty State */\\n.empty-state {\\n    text-align: center;\\n    padding: 40px 20px;\\n    color: var(--text-secondary);\\n}\\n\\n.empty-icon {\\n    font-size: 3rem;\\n    display: block;\\n    margin-bottom: 10px;\\n}\\n\\n.empty-state p {\\n    font-size: 1rem;\\n}\\n\\n.hidden {\\n    display: none;\\n}\\n\\n/* Responsive */\\n@media (max-width: 480px) {\\n    .container {\\n        padding: 25px 20px;\\n    }\\n\\n    header h1 {\\n        font-size: 1.8rem;\\n    }\\n\\n    .input-section {\\n        flex-direction: column;\\n    }\\n\\n    #addBtn {\\n        width: 100%;\\n    }\\n\\n    .delete-btn {\\n        opacity: 1;\\n    }\\n}",\n      "type": "css"\n    },\n    {\n      "filename": "script.js",\n      "content": "// Todo App - Dark Theme\\n// State management\\nlet todos = JSON.parse(localStorage.getItem(\'todos\')) || [];\\nlet currentFilter = \'all\';\\n\\n// DOM Elements\\nconst todoInput = document.getElementById(\'todoInput\');\\nconst todoList = document.getElementById(\'todoList\');\\nconst emptyState = document.getElementById(\'emptyState\');\\nconst taskCount = document.getElementById(\'taskCount\');\\n\\n// Initialize app\\ndocument.addEventListener(\'DOMContentLoaded\', () => {\\n    renderTodos();\\n});\\n\\n// Add todo on Enter key\\ntodoInput.addEventListener(\'keypress\', (e) => {\\n    if (e.key === \'Enter\') {\\n        addTodo();\\n    }\\n});\\n\\n// Add a new todo\\nfunction addTodo() {\\n    const text = todoInput.value.trim();\\n    if (!text) return;\\n\\n    const todo = {\\n        id: Date.now(),\\n        text: text,\\n        completed: false,\\n        createdAt: new Date().toISOString()\\n    };\\n\\n    todos.unshift(todo);\\n    saveTodos();\\n    renderTodos();\\n    todoInput.value = \'\';\\n    todoInput.focus();\\n}\\n\\n// Toggle todo completion\\nfunction toggleTodo(id) {\\n    todos = todos.map(todo => {\\n        if (todo.id === id) {\\n            return { ...todo, completed: !todo.completed };\\n        }\\n        return todo;\\n    });\\n    saveTodos();\\n    renderTodos();\\n}\\n\\n// Delete a todo\\nfunction deleteTodo(id) {\\n    todos = todos.filter(todo => todo.id !== id);\\n    saveTodos();\\n    renderTodos();\\n}\\n\\n// Filter todos\\nfunction filterTodos(filter) {\\n    currentFilter = filter;\\n\\n    // Update active filter button\\n    document.querySelectorAll(\'.filter-btn\').forEach(btn => {\\n        btn.classList.remove(\'active\');\\n        if (btn.dataset.filter === filter) {\\n            btn.classList.add(\'active\');\\n        }\\n    });\\n\\n    renderTodos();\\n}\\n\\n// Clear completed todos\\nfunction clearCompleted() {\\n    todos = todos.filter(todo => !todo.completed);\\n    saveTodos();\\n    renderTodos();\\n}\\n\\n// Get filtered todos\\nfunction getFilteredTodos() {\\n    switch (currentFilter) {\\n        case \'active\':\\n            return todos.filter(todo => !todo.completed);\\n        case \'completed\':\\n            return todos.filter(todo => todo.completed);\\n        default:\\n            return todos;\\n    }\\n}\\n\\n// Render todos to the DOM\\nfunction renderTodos() {\\n    const filteredTodos = getFilteredTodos();\\n\\n    // Update empty state visibility\\n    if (filteredTodos.length === 0) {\\n        emptyState.classList.remove(\'hidden\');\\n        todoList.classList.add(\'hidden\');\\n    } else {\\n        emptyState.classList.add(\'hidden\');\\n        todoList.classList.remove(\'hidden\');\\n    }\\n\\n    // Render todo items\\n    todoList.innerHTML = filteredTodos.map(todo => `\\n        <li class=\\"todo-item ${todo.completed ? \'completed\' : \'\'}\\" data-id=\\"${todo.id}\\">\\n            <div class=\\"checkbox ${todo.completed ? \'checked\' : \'\'}\\" onclick=\\"toggleTodo(${todo.id})\\"></div>\\n            <span class=\\"todo-text\\">${escapeHtml(todo.text)}</span>\\n            <button class=\\"delete-btn\\" onclick=\\"deleteTodo(${todo.id})\\" title=\\"Delete\\">✕</button>\\n        </li>\\n    `).join(\'\');\\n\\n    // Update task count\\n    const activeTodos = todos.filter(todo => !todo.completed).length;\\n    const totalTodos = todos.length;\\n    taskCount.textContent = `${activeTodos} active / ${totalTodos} total`;\\n}\\n\\n// Save todos to localStorage\\nfunction saveTodos() '
+2026-05-29 20:22:17,850 - services.conversations - INFO - Created conversations with id: 6
+2026-05-29 20:22:17,851 - routers.conversations - INFO - Conversations created successfully with id: 6
+2026-05-29 20:22:17,851 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8362s
+2026-05-29 20:23:34,441 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-29 20:23:34,710 - core.database - INFO - Database connection closed and engine disposed
+2026-05-29 20:23:34,711 - services.database - INFO - Database connections closed
+2026-05-29 20:23:34,711 - services.database - DEBUG - [DB_OP] Database close completed in 0.2694s

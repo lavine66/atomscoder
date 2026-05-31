@@ -1,0 +1,24 @@
+2026-05-29 20:08:32,592 - main - INFO - === Logging system initialized ===
+2026-05-29 20:08:32,593 - main - INFO - Log file: logs/app_20260529_200832.log
+2026-05-29 20:08:32,593 - main - INFO - Log level: INFO
+2026-05-29 20:08:32,593 - main - INFO - Timestamp: 20260529_200832
+2026-05-29 20:08:33,717 - main - INFO - Included router: routers.ai_generate.router
+2026-05-29 20:08:33,735 - main - INFO - Included router: routers.aihub.router
+2026-05-29 20:08:33,748 - main - INFO - Included router: routers.auth.router
+2026-05-29 20:08:33,794 - main - INFO - Included router: routers.conversations.router
+2026-05-29 20:08:33,796 - main - INFO - Included router: routers.health.router
+2026-05-29 20:08:33,840 - main - INFO - Included router: routers.project_files.router
+2026-05-29 20:08:33,891 - main - INFO - Included router: routers.projects.router
+2026-05-29 20:08:33,959 - main - WARNING - Failed to import module 'routers.publish': No module named 'services.object_storage'
+2026-05-29 20:08:33,980 - main - INFO - Included router: routers.settings.router
+2026-05-29 20:08:34,018 - main - INFO - Included router: routers.storage.router
+2026-05-29 20:08:34,056 - main - INFO - Included router: routers.user.router
+2026-05-29 20:08:34,100 - main - INFO - Included router: routers.versions.router
+2026-05-29 20:08:34,102 - main - INFO - === Application startup initiated ===
+2026-05-29 20:08:34,102 - services.database - INFO - Ignore creating tables
+2026-05-29 20:08:34,102 - services.mock_data - INFO - Ignore initialize data
+2026-05-29 20:08:34,102 - services.auth - INFO - Ignore initialize admin
+2026-05-29 20:08:34,102 - main - INFO - === Application startup completed successfully ===
+2026-05-29 20:08:35,306 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-29 20:08:35,306 - services.database - INFO - Database connections closed
+2026-05-29 20:08:35,307 - services.database - DEBUG - [DB_OP] Database close completed in 0.0005s
