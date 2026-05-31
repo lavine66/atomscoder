@@ -1,0 +1,57 @@
+2026-05-31 00:10:06,834 - main - INFO - === Logging system initialized ===
+2026-05-31 00:10:06,834 - main - INFO - Log file: logs/app_20260531_001006.log
+2026-05-31 00:10:06,834 - main - INFO - Log level: INFO
+2026-05-31 00:10:06,834 - main - INFO - Timestamp: 20260531_001006
+2026-05-31 00:10:07,765 - main - INFO - Included router: routers.ai_generate.router
+2026-05-31 00:10:07,787 - main - INFO - Included router: routers.aihub.router
+2026-05-31 00:10:07,801 - main - INFO - Included router: routers.auth.router
+2026-05-31 00:10:07,854 - main - INFO - Included router: routers.conversations.router
+2026-05-31 00:10:07,856 - main - INFO - Included router: routers.health.router
+2026-05-31 00:10:07,899 - main - INFO - Included router: routers.project_files.router
+2026-05-31 00:10:07,957 - main - INFO - Included router: routers.projects.router
+2026-05-31 00:10:07,987 - main - INFO - Included router: routers.publish.router
+2026-05-31 00:10:08,008 - main - INFO - Included router: routers.settings.router
+2026-05-31 00:10:08,086 - main - INFO - Included router: routers.storage.router
+2026-05-31 00:10:08,096 - main - INFO - Included router: routers.user.router
+2026-05-31 00:10:08,149 - main - INFO - Included router: routers.versions.router
+2026-05-31 00:10:08,151 - main - INFO - === Application startup initiated ===
+2026-05-31 00:10:08,151 - services.database - INFO - Ignore creating tables
+2026-05-31 00:10:08,151 - services.mock_data - INFO - Ignore initialize data
+2026-05-31 00:10:08,151 - services.auth - INFO - Ignore initialize admin
+2026-05-31 00:10:08,151 - main - INFO - === Application startup completed successfully ===
+2026-05-31 00:10:24,740 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-31 00:10:24,741 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-31 00:10:24,757 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-31 00:10:25,078 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-31 00:10:25,078 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-31 00:10:25,078 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-31 00:10:25,078 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-31 00:10:25,078 - core.database - INFO - Starting database initialization...
+2026-05-31 00:10:25,078 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-31 00:10:25,079 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-31 00:10:25,080 - core.database - INFO - Creating async database engine...
+2026-05-31 00:10:25,080 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-31 00:10:25,129 - core.database - INFO - Database engine created successfully
+2026-05-31 00:10:25,129 - core.database - INFO - Creating async session maker...
+2026-05-31 00:10:25,129 - core.database - INFO - Async session maker created successfully
+2026-05-31 00:10:25,129 - core.database - INFO - Database connection initialized successfully
+2026-05-31 00:10:25,129 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-31 00:10:25,129 - core.database - INFO - 🔧 Starting table creation...
+2026-05-31 00:10:26,725 - core.database - INFO - Tables initialized successfully
+2026-05-31 00:10:26,725 - core.database - DEBUG - [DB_OP] Create tables completed in 1.5959s
+2026-05-31 00:10:26,788 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-31 00:10:26,788 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.7103s
+2026-05-31 00:10:26,789 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-31 00:10:27,498 - routers.projects - DEBUG - Found 11 projectss
+2026-05-31 00:10:27,499 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.4209s
+2026-05-31 00:12:12,203 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-31 00:12:12,529 - core.auth - DEBUG - Authentication token validated for user hash: 77856f5d
+2026-05-31 00:12:12,530 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-31 00:12:12,532 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0014s
+2026-05-31 00:12:12,533 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
+2026-05-31 00:12:12,916 - routers.projects - DEBUG - Found 11 projectss
+2026-05-31 00:12:12,917 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3865s
+2026-05-31 00:14:07,605 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-31 00:14:07,672 - core.database - INFO - Database connection closed and engine disposed
+2026-05-31 00:14:07,673 - services.database - INFO - Database connections closed
+2026-05-31 00:14:07,673 - services.database - DEBUG - [DB_OP] Database close completed in 0.0676s

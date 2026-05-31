@@ -222,53 +222,233 @@ const Workspace = () => {
         },
       });
 
-      // Extract the AI content from the response
+      // Extract the AI content from the response - handle various nesting levels
       let fullContent = "";
+      const resData = response.data;
 
-      if (response.data && typeof response.data === "object" && response.data.content) {
-        fullContent = response.data.content;
-      } else if (typeof response.data === "string") {
-        fullContent = response.data;
+      // Handle potential double-nesting: response.data.data.content
+      if (resData && typeof resData === "object") {
+        if (resData.content && typeof resData.content === "string") {
+          fullContent = resData.content;
+        } else if (resData.data && typeof resData.data === "object" && resData.data.content) {
+          fullContent = resData.data.content;
+        } else if (resData.data && typeof resData.data === "string") {
+          fullContent = resData.data;
+        } else {
+          fullContent = JSON.stringify(resData);
+        }
+      } else if (typeof resData === "string") {
+        fullContent = resData;
       } else {
-        fullContent = JSON.stringify(response.data);
+        fullContent = JSON.stringify(resData);
       }
 
-      console.log("Raw AI fullContent:", fullContent.substring(0, 300));
+      console.log("Raw AI response structure:", typeof resData, Object.keys(resData || {}));
+      console.log("Extracted fullContent (first 300):", fullContent.substring(0, 300));
       setStreamContent(fullContent);
       await processAIResponse(fullContent);
     } catch (e: any) {
+      const errorDetail = e?.data?.detail || e?.response?.data?.detail || e?.message || "Failed to generate code";
       toast({
         title: "Generation failed",
-        description: e?.data?.detail || e?.message || "Failed to generate code",
+        description: errorDetail,
         variant: "destructive",
       });
       setIsGenerating(false);
     }
   };
 
+  const extractJsonFromContent = (content: string): string | null => {
+    const trimmed = content.trim();
+    
+    // Strategy 1: Remove markdown code blocks (```json, ```JSON, ```javascript, ```)
+    const codeBlockPatterns = [
+      /```(?:json|JSON)\s*\n?([\s\S]*?)```/,
+      /```(?:javascript|js)\s*\n?([\s\S]*?)```/,
+      /```\s*\n?([\s\S]*?)```/,
+    ];
+    
+    let extracted = trimmed;
+    for (const pattern of codeBlockPatterns) {
+      const match = extracted.match(pattern);
+      if (match) {
+        extracted = match[1].trim();
+        break;
+      }
+    }
+    
+    // Strategy 2: Find outermost JSON object by brace matching
+    const startIdx = extracted.indexOf("{");
+    if (startIdx === -1) return null;
+    
+    let braceCount = 0;
+    let inString = false;
+    let escapeNext = false;
+    let endIdx = -1;
+    
+    for (let i = startIdx; i < extracted.length; i++) {
+      const char = extracted[i];
+      
+      if (escapeNext) {
+        escapeNext = false;
+        continue;
+      }
+      
+      if (char === "\\" && inString) {
+        escapeNext = true;
+        continue;
+      }
+      
+      if (char === '"' && !escapeNext) {
+        inString = !inString;
+        continue;
+      }
+      
+      if (inString) continue;
+      
+      if (char === "{") braceCount++;
+      else if (char === "}") {
+        braceCount--;
+        if (braceCount === 0) {
+          endIdx = i;
+          break;
+        }
+      }
+    }
+    
+    if (endIdx > startIdx) {
+      return extracted.substring(startIdx, endIdx + 1);
+    }
+    
+    // Strategy 3: Fallback to lastIndexOf
+    const lastBrace = extracted.lastIndexOf("}");
+    if (lastBrace > startIdx) {
+      return extracted.substring(startIdx, lastBrace + 1);
+    }
+    
+    return null;
+  };
+
+  const tryRepairJson = (jsonStr: string): string | null => {
+    // Try direct parse first
+    try {
+      JSON.parse(jsonStr);
+      return jsonStr;
+    } catch {
+      // Continue with repair
+    }
+    
+    // Count unclosed braces/brackets
+    let inString = false;
+    let escapeNext = false;
+    let braces = 0;
+    let brackets = 0;
+    
+    for (const char of jsonStr) {
+      if (escapeNext) { escapeNext = false; continue; }
+      if (char === "\\" && inString) { escapeNext = true; continue; }
+      if (char === '"' && !escapeNext) { inString = !inString; continue; }
+      if (inString) continue;
+      if (char === "{") braces++;
+      else if (char === "}") braces--;
+      else if (char === "[") brackets++;
+      else if (char === "]") brackets--;
+    }
+    
+    let repaired = jsonStr.trimEnd();
+    
+    // Close unclosed string
+    if (inString) repaired += '"';
+    
+    // Close brackets and braces
+    for (let i = 0; i < brackets; i++) repaired += "]";
+    for (let i = 0; i < braces; i++) repaired += "}";
+    
+    try {
+      JSON.parse(repaired);
+      return repaired;
+    } catch {
+      // Continue
+    }
+    
+    // More aggressive: find last complete file object in the files array
+    const filesMatch = jsonStr.match(/"files"\s*:\s*\[/);
+    if (filesMatch && filesMatch.index !== undefined) {
+      const arrayStart = filesMatch.index + filesMatch[0].length;
+      let lastCompleteEnd = -1;
+      let depth = 0;
+      let inStr = false;
+      let esc = false;
+      
+      for (let i = arrayStart; i < jsonStr.length; i++) {
+        const c = jsonStr[i];
+        if (esc) { esc = false; continue; }
+        if (c === "\\" && inStr) { esc = true; continue; }
+        if (c === '"' && !esc) { inStr = !inStr; continue; }
+        if (inStr) continue;
+        if (c === "{") depth++;
+        else if (c === "}") {
+          depth--;
+          if (depth === 0) lastCompleteEnd = i;
+        }
+      }
+      
+      if (lastCompleteEnd > 0) {
+        const truncated = jsonStr.substring(0, lastCompleteEnd + 1);
+        const repairedJson = truncated + '], "description": "Code generated successfully. Would you like me to make any changes?"}';
+        try {
+          JSON.parse(repairedJson);
+          return repairedJson;
+        } catch {
+          // Give up
+        }
+      }
+    }
+    
+    return null;
+  };
+
   const processAIResponse = async (content: string) => {
     try {
-      // Try to parse the JSON response
+      // Try to extract and parse the JSON response
       let parsed: any = null;
       
-      // Extract JSON from potential markdown code blocks (handle ```json, ```JSON, ``` etc.)
-      let jsonStr = content.trim();
-      const codeBlockMatch = jsonStr.match(/```(?:json|JSON)?\s*\n?([\s\S]*?)```/);
-      if (codeBlockMatch) {
-        jsonStr = codeBlockMatch[1].trim();
+      // Step 1: Extract JSON string
+      const jsonStr = extractJsonFromContent(content);
+      
+      if (!jsonStr) {
+        // Couldn't find JSON at all
+        console.error("No JSON object found in AI response. Raw:", content.substring(0, 500));
+        throw new Error("No JSON found");
       }
       
-      // Find the outermost JSON object
-      const startIdx = jsonStr.indexOf("{");
-      const endIdx = jsonStr.lastIndexOf("}");
-      if (startIdx >= 0 && endIdx > startIdx) {
-        jsonStr = jsonStr.substring(startIdx, endIdx + 1);
+      // Step 2: Try to parse directly
+      try {
+        parsed = JSON.parse(jsonStr);
+      } catch (parseError) {
+        console.warn("Direct JSON parse failed, attempting repair...", parseError);
+        
+        // Step 3: Try to repair
+        const repaired = tryRepairJson(jsonStr);
+        if (repaired) {
+          parsed = JSON.parse(repaired);
+          console.info("JSON repair successful");
+        } else {
+          throw parseError;
+        }
       }
 
-      parsed = JSON.parse(jsonStr) as any;
-
       if (parsed && parsed.files && Array.isArray(parsed.files)) {
-        const newFiles: ProjectFile[] = parsed.files.map((f: any) => ({
+        // Filter out any malformed file entries
+        const validFiles = parsed.files.filter((f: any) => 
+          f && typeof f.filename === "string" && typeof f.content === "string"
+        );
+        
+        if (validFiles.length === 0) {
+          throw new Error("No valid file entries found");
+        }
+
+        const newFiles: ProjectFile[] = validFiles.map((f: any) => ({
           filename: f.filename,
           content: f.content,
           type: f.type || getFileType(f.filename),
@@ -318,9 +498,9 @@ const Workspace = () => {
         }
       }
     } catch (e) {
-      // JSON parse failed - show friendly error, log raw content for debugging
+      // JSON parse failed - show friendly error with auto-retry option
       console.error("Failed to parse AI response:", e, "\nRaw content:", content.substring(0, 500));
-      const assistantMsg = "I had trouble processing the response. Let me try again — could you describe what you'd like to build in a bit more detail?";
+      const assistantMsg = "I had trouble processing the AI response. This can happen with complex requests. Let me try again — could you describe what you'd like to build in a bit more detail, or try a simpler request first?";
       setMessages((prev) => [...prev, { role: "assistant", content: assistantMsg }]);
       try {
         await client.entities.conversations.create({

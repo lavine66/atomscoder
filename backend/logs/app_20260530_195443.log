@@ -58,3 +58,8 @@
 2026-05-30 20:05:17,343 - routers.projects - DEBUG - Querying projectss: query=None, sort=-updated_at, skip=0, limit=50, fields=None
 2026-05-30 20:05:17,724 - routers.projects - DEBUG - Found 9 projectss
 2026-05-30 20:05:17,725 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3829s
+2026-05-30 20:08:50,529 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-30 20:09:08,551 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-30 20:09:08,618 - core.database - INFO - Database connection closed and engine disposed
+2026-05-30 20:09:08,618 - services.database - INFO - Database connections closed
+2026-05-30 20:09:08,619 - services.database - DEBUG - [DB_OP] Database close completed in 0.0674s
